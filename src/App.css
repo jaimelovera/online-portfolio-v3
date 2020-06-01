@@ -1,0 +1,19 @@
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  height: 100%;
+  margin: 0;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app-container {
+  margin: 0 auto 0 auto;
+  padding: 0 8px 0 8px;
+  max-width: 1200px;
+}

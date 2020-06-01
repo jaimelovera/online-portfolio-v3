@@ -1,30 +1,25 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import "./App.css";
+import themeFile from "./util/theme";
 
 // Components
 import Navbar from "./components/Navbar";
 
-// Pages
-import home from "./pages/home";
-import projects from "./pages/projects";
-import contact from "./pages/contact";
+// Material-UI Stuff
+import { ThemeProvider } from "@material-ui/core/styles";
+import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+
+const theme = createMuiTheme(themeFile);
 
 function App() {
   return (
-    <div className="app-outer-container">
-      <Router>
-        <Navbar />
-        <div className="app-inner-container">
-          <Switch>
-            <Route exact path="/" component={home} />
-            <Route exact path="/projects" component={projects} />
-            <Route exact path="/contact" component={contact} />
-          </Switch>
-        </div>
-      </Router>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Navbar />
+      <div className="app-container">
+        <p style={{ height: "150vh", margin: 0 }}>Hello from app</p>
+      </div>
+    </ThemeProvider>
   );
 }
 

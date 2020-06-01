@@ -1,0 +1,42 @@
+.navContainer {
+  justify-content: space-between;
+  margin: 0 20px 0 20px;
+}
+
+.logoImg {
+  width: 45px;
+  height: 45px;
+}
+
+.resumeLink {
+  padding: 6px 10px 8px 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navLink {
+  font-size: 1.15em;
+  margin: 0 20px 0 20px !important;
+}
+
+.drawerTopBar {
+  min-width: 50vw;
+  padding: 5px 35px 5px 35px;
+}
+
+.navLinksDrawer {
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.navLinkDrawer {
+  font-size: 1.15em;
+  margin: 20px !important;
+}

@@ -21,14 +21,17 @@ function App() {
     <ThemeProvider theme={theme}>
       <Navbar />
       <div className="app-container">
+        <div id="intro" style={style.navBarOffSet}>
+          <p style={{ height: "150vh", margin: 0 }}>Hello from intro</p>
+        </div>
         <div id="about" style={style.navBarOffSet}>
-          <p style={{ height: "150vh", margin: 0 }}> Hello from about</p>
+          <p style={{ height: "150vh", margin: 0 }}>Hello from about</p>
         </div>
         <div id="projects" style={style.navBarOffSet}>
-          <p style={{ height: "150vh", margin: 0 }}> Hello from projects</p>
+          <p style={{ height: "150vh", margin: 0 }}>Hello from projects</p>
         </div>
         <div id="contact" style={style.navBarOffSet}>
-          <p style={{ height: "150vh", margin: 0 }}> Hello from contact</p>
+          <p style={{ height: "150vh", margin: 0 }}>Hello from contact</p>
         </div>
       </div>
     </ThemeProvider>

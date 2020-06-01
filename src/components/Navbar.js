@@ -11,6 +11,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Link from "@material-ui/core/Link";
 import Hidden from "@material-ui/core/Hidden";
 import Grid from "@material-ui/core/Grid";
+import Button from "@material-ui/core/Button";
 
 // Material-UI Icons
 import MenuIcon from "@material-ui/icons/Menu";
@@ -23,7 +24,7 @@ class Navbar extends Component {
     drawerOpen: false,
   };
 
-  handleMenuButtonClick = () => {
+  handleDrawerOpenClose = () => {
     this.setState((prevState) => ({
       drawerOpen: !prevState.drawerOpen,
     }));
@@ -32,41 +33,39 @@ class Navbar extends Component {
   render() {
     const { drawerOpen } = this.state;
 
-    const navLinks = (linkStyles, linksStyles) => (
-      <div className={linksStyles}>
-        <Link
-          href="#top"
-          color="primary"
-          underline="none"
-          className={linkStyles}
-        >
-          About
-        </Link>
-        <Link
-          href="#projects"
-          color="primary"
-          underline="none"
-          className={linkStyles}
-        >
-          Projects
-        </Link>
-        <Link
-          href="#contact"
-          color="primary"
-          underline="none"
-          className={linkStyles}
-        >
-          Contact
-        </Link>
+    const navLinks = (linkStyles, linksContainerStyles, mobileView = false) => (
+      <div className={linksContainerStyles}>
+        {["#about", "#projects", "#contact"].map((id) => {
+          /* Use the anchor tag to get the title of the link */
+          let title = id.slice(1);
+          title = title.charAt(0).toUpperCase() + title.slice(1);
+          return (
+            <Link
+              key={id}
+              href={id}
+              onClick={mobileView ? this.handleDrawerOpenClose : null}
+              color="secondary"
+              underline="none"
+              className={linkStyles}
+            >
+              {title}
+            </Link>
+          );
+        })}
         <Link
           href={resume}
           target="_blank"
           rel="noreferrer"
-          color="primary"
+          color="secondary"
           underline="none"
           className={`${linkStyles} ${styles.resumeLink}`}
         >
-          Resume
+          <Button
+            variant="contained"
+            color={!mobileView ? "primary" : "default"}
+          >
+            Resume
+          </Button>
         </Link>
       </div>
     );
@@ -75,13 +74,13 @@ class Navbar extends Component {
       <Fragment>
         <HideOnScroll>
           <div>
-            <AppBar color="secondary">
+            <AppBar color="primary">
               <Toolbar className={styles.navContainer}>
                 {/* Empty onOpen function to remove PropType isRequired error. I dont need it... */}
                 <SwipeableDrawer
                   anchor={"right"}
                   open={drawerOpen}
-                  onClose={this.handleMenuButtonClick}
+                  onClose={this.handleDrawerOpenClose}
                   onOpen={() => {}}
                 >
                   <Grid
@@ -93,14 +92,15 @@ class Navbar extends Component {
                   >
                     <IconButton
                       className={styles.menuButton}
-                      onClick={this.handleMenuButtonClick}
+                      onClick={this.handleDrawerOpenClose}
                     >
                       <CloseIcon />
                     </IconButton>
                   </Grid>
                   {navLinks(
                     `${styles.navLink} ${styles.navLinkDrawer}`,
-                    `${styles.navLinks} ${styles.navLinksDrawer}`
+                    `${styles.navLinks} ${styles.navLinksDrawer}`,
+                    true
                   )}
                 </SwipeableDrawer>
                 <img src={logoImg} alt="jl logo" className={styles.logoImg} />
@@ -111,7 +111,7 @@ class Navbar extends Component {
                   {!drawerOpen && (
                     <IconButton
                       className={styles.menuButton}
-                      onClick={this.handleMenuButtonClick}
+                      onClick={this.handleDrawerOpenClose}
                     >
                       <MenuIcon />
                     </IconButton>

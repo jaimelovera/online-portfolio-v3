@@ -8,6 +8,7 @@ function HideOnScroll(props) {
   const trigger = useScrollTrigger({
     threshold: 80,
   });
+
   return <Fade in={!trigger}>{props.children}</Fade>;
 }
 

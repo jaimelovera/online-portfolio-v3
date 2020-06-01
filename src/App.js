@@ -17,7 +17,15 @@ function App() {
     <ThemeProvider theme={theme}>
       <Navbar />
       <div className="app-container">
-        <p style={{ height: "150vh", margin: 0 }}>Hello from app</p>
+        <div id="about">
+          <p style={{ height: "150vh", margin: 0 }}> Hello from about</p>
+        </div>
+        <div id="projects">
+          <p style={{ height: "150vh", margin: 0 }}> Hello from projects</p>
+        </div>
+        <div id="contact">
+          <p style={{ height: "150vh", margin: 0 }}> Hello from contact</p>
+        </div>
       </div>
     </ThemeProvider>
   );

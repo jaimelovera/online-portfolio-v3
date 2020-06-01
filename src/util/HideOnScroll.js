@@ -1,15 +1,13 @@
 import React from "react";
 
 // Material-UI stuff
-import Slide from "@material-ui/core/Slide";
-import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Fade from "@material-ui/core/Fade";
+import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 
 function HideOnScroll(props) {
   const trigger = useScrollTrigger({
-    threshold: 50,
+    threshold: 80,
   });
-  console.log(trigger);
   return <Fade in={!trigger}>{props.children}</Fade>;
 }
 

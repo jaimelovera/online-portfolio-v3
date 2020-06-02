@@ -1,15 +1,48 @@
 import React, { Component } from "react";
-import styles from "./Intro.module.css";
-import laptopImg from "../../../img/laptop.png";
+import laptopDeskImg from "../../../img/desk-laptop-bg.jpg";
 
 // Material-UI Stuff
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import { withStyles } from "@material-ui/core/styles";
+
+const commonStyle = { introTextShadow: "1px 1px 3px rgba(144, 164, 174,0.8)" };
+
+const styles = (theme) => ({
+  sectionContainer: {
+    backgroundImage: `linear-gradient(to bottom,rgba(144, 164, 174, 0.75), rgba(144, 164, 174, 0.6), rgba(144, 164, 174, 0.5)),url(${laptopDeskImg})`,
+    backgroundSize: "cover",
+    paddingTop: 100,
+    [theme.breakpoints.up("sm")]: {
+      paddingTop: 120,
+      borderRadius: "0 0 50% 50%/4%",
+    },
+  },
+  myNameIs: {
+    textShadow: commonStyle.introTextShadow,
+  },
+  jaimeLovera: {
+    fontFamily: '"Nunito", sans-serif',
+    fontWeight: 800,
+    textShadow: commonStyle.introTextShadow,
+  },
+  shortInfo: {
+    fontFamily: '"Quicksand", sans-serif',
+    textShadow: commonStyle.introTextShadow,
+  },
+  longInfo: {
+    maxWidth: 500,
+    padding: "20px 0 160px 0",
+    textShadow: commonStyle.introTextShadow,
+  },
+});
 
 class Intro extends Component {
   render() {
+    const { classes } = this.props;
+
     return (
-      <div className={`section-container ${styles.sectionContainer}`}>
+      <div className={`section-container ${classes.sectionContainer}`}>
         <div className="content-container">
           <Grid
             container
@@ -18,23 +51,21 @@ class Intro extends Component {
             alignItems="flex-start"
           >
             <Grid item>
-              <Typography variant="body1">Hi, my name is</Typography>
-              <Typography variant="h2">Jaime Lovera.</Typography>
-              <Typography variant="h2">I build things for the web.</Typography>
-              <Typography variant="body1" className={styles.introBody}>
-                I am a blah blah blah and I do the blah blah balh with the blah
-                blah blah tools and I also work in the area blah blah blah.
+              <Typography variant="body1" className={classes.myNameIs}>
+                Hi, my name is
               </Typography>
-            </Grid>
-          </Grid>
-          <Grid
-            container
-            direction="column"
-            justify="center"
-            alignItems="center"
-          >
-            <Grid item>
-              <img src={laptopImg} alt="laptop" className={styles.laptopImg} />
+              <Typography variant="h1" className={classes.jaimeLovera}>
+                Jaime Lovera.
+              </Typography>
+              <Typography variant="h2" className={classes.shortInfo}>
+                I build things for the web.
+              </Typography>
+              <Typography variant="body1" className={classes.longInfo}>
+                Nisl altera incorrupte per at, no per exerci nusquam iracundia,
+                cu pro lobortis ocurreret. Pri at cetero suscipit. Per at
+                denique ancillae argumentum, ei sint inermis omittantur vix.
+                Latine qualisque erroribus ut cum.
+              </Typography>
             </Grid>
           </Grid>
         </div>
@@ -43,4 +74,4 @@ class Intro extends Component {
   }
 }
 
-export default Intro;
+export default withStyles(styles)(Intro);

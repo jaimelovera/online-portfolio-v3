@@ -12,6 +12,7 @@ import Link from "@material-ui/core/Link";
 import Hidden from "@material-ui/core/Hidden";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 
 // Material-UI Icons
 import MenuIcon from "@material-ui/icons/Menu";
@@ -49,7 +50,7 @@ class Navbar extends Component {
               underline="none"
               className={linkStyles}
             >
-              {item[1]}
+              <Typography variant="body1">{item[1]}</Typography>
             </Link>
           );
         })}
@@ -65,7 +66,7 @@ class Navbar extends Component {
             variant="contained"
             color={!mobileView ? "primary" : "default"}
           >
-            Resume
+            <Typography variant="body1">Resume</Typography>
           </Button>
         </Link>
       </div>

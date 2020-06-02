@@ -4,13 +4,16 @@
 }
 
 .logoImg {
-  height: 52px;
+  height: 56px;
   width: auto;
-  opacity: 0.8;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .logoImg:hover {
-  opacity: 1;
+  filter: saturate(250%);
 }
 
 .navLinks {

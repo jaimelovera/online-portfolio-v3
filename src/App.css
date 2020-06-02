@@ -14,11 +14,11 @@ a {
 }
 
 .section-container {
-  padding-top: 56px;
+  padding: 56px 4px 0 4px;
 }
 
 .content-container {
   margin: 0 auto 0 auto;
-  padding: 20px 8px 0 8px;
+  padding: 10px 8px 0 8px;
   max-width: 1000px;
 }

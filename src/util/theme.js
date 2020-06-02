@@ -15,5 +15,10 @@ export default {
     button: {
       textTransform: "none",
     },
+    body1: {
+      fontSize: "1.1rem",
+      fontFamily: '"Nunito", sans-serif',
+      fontWeight: 400,
+    },
   },
 };

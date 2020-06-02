@@ -10,10 +10,14 @@ import Projects from "./components/sections/Projects/Projects";
 import Contact from "./components/sections/Contact/Contact";
 
 // Material-UI Stuff
-import { ThemeProvider } from "@material-ui/core/styles";
-import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+import {
+  createMuiTheme,
+  responsiveFontSizes,
+  ThemeProvider,
+} from "@material-ui/core/styles";
 
-const theme = createMuiTheme(themeFile);
+let theme = createMuiTheme(themeFile);
+theme = responsiveFontSizes(theme);
 
 function App() {
   return (

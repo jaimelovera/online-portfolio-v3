@@ -3,11 +3,12 @@ import themeFile from "./util/theme";
 import "./App.css";
 
 // Components
-import Navbar from "./components/Navbar/Navbar";
-import Intro from "./components/sections/Intro/Intro";
-import About from "./components/sections/About/About";
-import Projects from "./components/sections/Projects/Projects";
-import Contact from "./components/sections/Contact/Contact";
+import Navbar from "./components/layout/Navbar";
+import Intro from "./components/sections/Intro";
+import About from "./components/sections/About";
+import Projects from "./components/sections/Projects";
+import Contact from "./components/sections/Contact";
+import Footer from "./components/sections/Footer";
 
 // Material-UI Stuff
 import {
@@ -28,6 +29,7 @@ function App() {
         ["about", <About />],
         ["projects", <Projects />],
         ["contact", <Contact />],
+        ["footer", <Footer />],
       ].map((item) => (
         <div id={item[0]}>{item[1]}</div>
       ))}

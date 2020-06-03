@@ -14,6 +14,7 @@ const styles = (theme) => ({
     backgroundImage: `linear-gradient(to bottom,rgba(144, 164, 174, 0.85), rgba(144, 164, 174, 0.85)),url(${laptopDeskMobileImg})`,
     backgroundSize: "cover",
     paddingTop: 100,
+    paddingBottom: 0,
     [theme.breakpoints.up("sm")]: {
       paddingTop: 120,
       borderRadius: "0 0 50% 50%/4%",

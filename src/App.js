@@ -31,7 +31,9 @@ function App() {
         ["contact", <Contact />],
         ["footer", <Footer />],
       ].map((item) => (
-        <div id={item[0]}>{item[1]}</div>
+        <div id={item[0]} key={item[0]}>
+          {item[1]}
+        </div>
       ))}
     </ThemeProvider>
   );

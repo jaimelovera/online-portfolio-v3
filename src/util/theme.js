@@ -19,6 +19,10 @@ export default {
       fontSize: "1.1rem",
       fontFamily: '"Nunito", sans-serif',
     },
+    body2: {
+      fontSize: "1.1rem",
+      fontFamily: '"Nunito", sans-serif',
+    },
     h1: {
       fontFamily: '"Nunito", sans-serif',
       fontWeight: 700,

@@ -7,7 +7,7 @@ import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
-const commonStyles = { introTextShadow: "#90a4ae 1px 0 10px" };
+const comStyles = { introTextShadow: "#90a4ae 1px 0 10px" };
 
 const styles = (theme) => ({
   sectionContainer: {
@@ -21,22 +21,20 @@ const styles = (theme) => ({
     },
   },
   myNameIs: {
-    textShadow: commonStyles.introTextShadow,
+    fontWeight: 400,
+    textShadow: comStyles.introTextShadow,
   },
   jaimeLovera: {
-    fontFamily: '"Nunito", sans-serif',
     fontWeight: 800,
-    textShadow: commonStyles.introTextShadow,
+    textShadow: comStyles.introTextShadow,
   },
   shortInfo: {
-    fontFamily: '"Nunito", sans-serif',
-    fontWeight: 400,
-    textShadow: commonStyles.introTextShadow,
+    textShadow: comStyles.introTextShadow,
   },
   longInfo: {
     maxWidth: 500,
     padding: "20px 0 140px 0",
-    textShadow: commonStyles.introTextShadow,
+    textShadow: comStyles.introTextShadow,
   },
 });
 

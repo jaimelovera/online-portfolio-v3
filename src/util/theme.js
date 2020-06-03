@@ -18,7 +18,30 @@ export default {
     body1: {
       fontSize: "1.1rem",
       fontFamily: '"Nunito", sans-serif',
-      fontWeight: 400,
+    },
+    h1: {
+      fontFamily: '"Nunito", sans-serif',
+      fontWeight: 700,
+    },
+    h2: {
+      fontFamily: '"Nunito", sans-serif',
+      fontWeight: 700,
+    },
+    h3: {
+      fontFamily: '"Nunito", sans-serif',
+      fontWeight: 700,
+    },
+    h4: {
+      fontFamily: '"Nunito", sans-serif',
+      fontWeight: 700,
+    },
+    h5: {
+      fontFamily: '"Nunito", sans-serif',
+      fontWeight: 700,
+    },
+    h6: {
+      fontFamily: '"Nunito", sans-serif',
+      fontWeight: 700,
     },
   },
 };

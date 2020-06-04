@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import ProfileImg from "../../img/profile-photo.jpg";
-import LaptopImg from "../../img/laptop.png";
+import WebDevImg from "../../img/web-development.png";
 
 // Material-UI Stuff
 import { withStyles } from "@material-ui/core/styles";
@@ -29,24 +29,36 @@ const styles = (theme) => ({
     paddingTop: 80,
   },
   profileImg: {
-    maxWidth: 350,
+    width: "100%",
     height: "auto",
+    maxWidth: 275,
+    margin: "40px 0 40px 0",
+    border: `4px solid ${theme.palette.primary.main}`,
     borderRadius: 10,
-    border: `2px solid ${theme.palette.primary.main}`,
   },
-  laptopImg: {
-    maxWidth: 350,
+  profileImgBorder: {
+    zIndex: -1,
+    position: "absolute",
+    backgroundColor: theme.palette.primary.main,
+    width: "50vw",
+    height: "2px",
+    top: "50%",
+    left: "50%",
+  },
+  webDevImg: {
+    width: "100%",
     height: "auto",
+    maxWidth: 400,
   },
   techLogo: {
-    width: "60%",
+    width: "100%",
     height: "auto",
-    maxWidth: 52,
-    maxHeight: 52,
+    maxWidth: 45,
+    maxHeight: 45,
     padding: "5px 0 5px 0",
   },
   technologiesSection: {
-    paddingTop: 30,
+    paddingTop: 20,
   },
 });
 
@@ -120,7 +132,7 @@ function About(props) {
   return (
     <div className={`section-container ${classes.sectionContainer}`}>
       <div className="content-container">
-        <Grid container alignItems="center">
+        <Grid container alignItems="center" spacing={3}>
           <Grid item xs={12} sm={6}>
             <Grid container>
               <Grid item>{aboutMarkup}</Grid>
@@ -129,17 +141,20 @@ function About(props) {
           <Grid item xs={12} sm={6}>
             <Grid container justify="center">
               <Grid item>
-                <img
-                  src={ProfileImg}
-                  alt="Profile"
-                  className={classes.profileImg}
-                />
+                <div style={{ position: "relative" }}>
+                  <div className={classes.profileImgBorder} />
+                  <img
+                    src={ProfileImg}
+                    alt="Profile"
+                    className={classes.profileImg}
+                  />
+                </div>
               </Grid>
             </Grid>
           </Grid>
         </Grid>
 
-        <Grid container alignItems="center">
+        <Grid container alignItems="center" spacing={3}>
           <Grid item xs={12} sm={6}>
             <Grid container>
               <Grid item>{technologiesMarkUp}</Grid>
@@ -149,10 +164,20 @@ function About(props) {
             <Grid container justify="center">
               <Grid item>
                 <img
-                  src={LaptopImg}
+                  src={WebDevImg}
                   alt="Laptop"
-                  className={classes.laptopImg}
+                  className={classes.webDevImg}
                 />
+                <Typography
+                  variant="subtitle1"
+                  style={{
+                    maxWidth: "80%",
+                    textAlign: "center",
+                    margin: "0 auto 0 auto",
+                  }}
+                >
+                  I build responsive websites that work for all devices sizes!
+                </Typography>
               </Grid>
             </Grid>
           </Grid>

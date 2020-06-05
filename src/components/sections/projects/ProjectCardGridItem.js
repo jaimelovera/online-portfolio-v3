@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 // Material-UI Stuff
@@ -16,12 +16,13 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
-import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
 
 // Icons
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LaunchIcon from "@material-ui/icons/Launch";
+import CloseIcon from "@material-ui/icons/Close";
+import OndemandVideoIcon from "@material-ui/icons/OndemandVideo";
 
 const styles = (theme) => ({
   card: {
@@ -56,13 +57,14 @@ function ProjectCard(props) {
   const {
     classes,
     image,
-    gif,
+    demoGif,
     title,
     body,
     technologies,
     visitLink,
     gitHubLink,
   } = props;
+
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -72,28 +74,11 @@ function ProjectCard(props) {
     setOpen(false);
   };
 
-  const visitLinks = (gitHubLink, visitLink) => {
-    return (
-      <Fragment>
-        <Tooltip title="GitHub" placement="top" arrow>
-          <IconButton href={gitHubLink} target="_blank">
-            <GitHubIcon color="info" />
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Visit" placement="top" arrow>
-          <IconButton href={visitLink} target="_blank">
-            <LaunchIcon color="info" />
-          </IconButton>
-        </Tooltip>
-      </Fragment>
-    );
-  };
-
   return (
     <Grid item xs={12} sm={6} md={4}>
       <Card className={classes.card}>
-        <Tooltip title="View a quick demo!" placement="top" arrow>
-          <CardActionArea onClick={handleClickOpen}>
+        <Tooltip title="View Demo" placement="top" arrow>
+          <CardActionArea disabled>
             <CardMedia component="img" image={image} alt={title} />
             <CardContent style={{ paddingBottom: 0 }}>
               <Typography gutterBottom variant="h5">
@@ -112,7 +97,21 @@ function ProjectCard(props) {
         </Tooltip>
         <Grid container direction="row" justify="flex-end" alignItems="center">
           <CardActions style={{ padding: 2 }}>
-            {visitLinks(gitHubLink, visitLink)}
+            <Tooltip title="Play Demo" placement="top" arrow>
+              <IconButton onClick={handleClickOpen}>
+                <OndemandVideoIcon color="info" />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="Visit" placement="top" arrow>
+              <IconButton href={visitLink} target="_blank">
+                <LaunchIcon color="info" />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="Code" placement="top" arrow>
+              <IconButton href={gitHubLink} target="_blank">
+                <GitHubIcon color="info" />
+              </IconButton>
+            </Tooltip>
           </CardActions>
         </Grid>
       </Card>
@@ -131,11 +130,26 @@ function ProjectCard(props) {
         <DialogContent dividers>
           <Grid container>
             <Grid item>
-              <img src={gif} alt="Project demo" className={classes.dialogImg} />
+              <img
+                src={demoGif}
+                alt="Project demo"
+                className={classes.dialogImg}
+              />
             </Grid>
           </Grid>
         </DialogContent>
-        <DialogActions>{visitLinks(gitHubLink, visitLink)}</DialogActions>
+        <DialogActions>
+          <Tooltip title="Visit" placement="top" arrow>
+            <IconButton href={visitLink} target="_blank">
+              <LaunchIcon color="info" />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Code" placement="top" arrow>
+            <IconButton href={gitHubLink} target="_blank">
+              <GitHubIcon color="info" />
+            </IconButton>
+          </Tooltip>
+        </DialogActions>
       </Dialog>
     </Grid>
   );
@@ -143,7 +157,7 @@ function ProjectCard(props) {
 
 ProjectCard.propTypes = {
   image: PropTypes.string.isRequired,
-  gif: PropTypes.string.isRequired,
+  demoGif: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   technologies: PropTypes.string.isRequired,

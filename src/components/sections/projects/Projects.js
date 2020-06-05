@@ -42,70 +42,7 @@ function Projects(props) {
         >
           <ProjectCardGridItem
             image={WebDevImg}
-            gif={WebDevImg}
-            title="Hello"
-            body="the body"
-            technologies="JavaScript, Firebase, React"
-            gitHubLink="/"
-            visitLink="/"
-          />
-          <ProjectCardGridItem
-            image={WebDevImg}
-            gif={WebDevImg}
-            title="Hello"
-            body="the body"
-            technologies="JavaScript, Firebase, React"
-            gitHubLink="/"
-            visitLink="/"
-          />
-          <ProjectCardGridItem
-            image={WebDevImg}
-            gif={WebDevImg}
-            title="Hello"
-            body="the body"
-            technologies="JavaScript, Firebase, React"
-            gitHubLink="/"
-            visitLink="/"
-          />
-          <ProjectCardGridItem
-            image={WebDevImg}
-            gif={WebDevImg}
-            title="Hello"
-            body="the body"
-            technologies="JavaScript, Firebase, React"
-            gitHubLink="/"
-            visitLink="/"
-          />
-          <ProjectCardGridItem
-            image={WebDevImg}
-            gif={WebDevImg}
-            title="Hello"
-            body="the body"
-            technologies="JavaScript, Firebase, React"
-            gitHubLink="/"
-            visitLink="/"
-          />
-          <ProjectCardGridItem
-            image={WebDevImg}
-            gif={WebDevImg}
-            title="Hello"
-            body="the body"
-            technologies="JavaScript, Firebase, React"
-            gitHubLink="/"
-            visitLink="/"
-          />
-          <ProjectCardGridItem
-            image={WebDevImg}
-            gif={WebDevImg}
-            title="Hello"
-            body="the body"
-            technologies="JavaScript, Firebase, React"
-            gitHubLink="/"
-            visitLink="/"
-          />
-          <ProjectCardGridItem
-            image={WebDevImg}
-            gif={WebDevImg}
+            demoGif={WebDevImg}
             title="Hello"
             body="the body"
             technologies="JavaScript, Firebase, React"

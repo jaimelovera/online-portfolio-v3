@@ -40,7 +40,7 @@ function Footer(props) {
     <div className={`section-container ${classes.sectionContainer}`}>
       <div className="content-container">
         <Grid container direction="column" justify="center" alignItems="center">
-          <Hidden smUp>
+          <Hidden lgUp>
             <Grid item xs={12}>
               <Link
                 href="https://github.com/jaimelovera"

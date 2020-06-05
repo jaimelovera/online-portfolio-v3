@@ -77,39 +77,37 @@ function ProjectCard(props) {
   return (
     <Grid item xs={12} sm={6} md={4}>
       <Card className={classes.card}>
-        <Tooltip title="View Demo" placement="top" arrow>
-          <CardActionArea disabled>
-            <CardMedia component="img" image={image} alt={title} />
-            <CardContent style={{ paddingBottom: 0 }}>
-              <Typography gutterBottom variant="h5">
-                {title}
+        <CardActionArea disabled>
+          <CardMedia component="img" image={image} alt={title} />
+          <CardContent style={{ paddingBottom: 0 }}>
+            <Typography gutterBottom variant="h5">
+              {title}
+            </Typography>
+            <Typography variant="body1" color="secondary">
+              {body}
+            </Typography>
+            <div style={{ paddingTop: 10 }}>
+              <Typography variant="caption" color="textSecondary">
+                {technologies}
               </Typography>
-              <Typography variant="body1" color="secondary">
-                {body}
-              </Typography>
-              <div style={{ paddingTop: 10 }}>
-                <Typography variant="caption" color="textSecondary">
-                  {technologies}
-                </Typography>
-              </div>
-            </CardContent>
-          </CardActionArea>
-        </Tooltip>
+            </div>
+          </CardContent>
+        </CardActionArea>
         <Grid container direction="row" justify="flex-end" alignItems="center">
           <CardActions style={{ padding: 2 }}>
             <Tooltip title="Play Demo" placement="top" arrow>
               <IconButton onClick={handleClickOpen}>
-                <OndemandVideoIcon color="info" />
+                <OndemandVideoIcon color="primary" />
               </IconButton>
             </Tooltip>
             <Tooltip title="Visit" placement="top" arrow>
               <IconButton href={visitLink} target="_blank">
-                <LaunchIcon color="info" />
+                <LaunchIcon color="primary" />
               </IconButton>
             </Tooltip>
             <Tooltip title="Code" placement="top" arrow>
               <IconButton href={gitHubLink} target="_blank">
-                <GitHubIcon color="info" />
+                <GitHubIcon color="primary" />
               </IconButton>
             </Tooltip>
           </CardActions>
@@ -141,12 +139,12 @@ function ProjectCard(props) {
         <DialogActions>
           <Tooltip title="Visit" placement="top" arrow>
             <IconButton href={visitLink} target="_blank">
-              <LaunchIcon color="info" />
+              <LaunchIcon color="primary" />
             </IconButton>
           </Tooltip>
           <Tooltip title="Code" placement="top" arrow>
             <IconButton href={gitHubLink} target="_blank">
-              <GitHubIcon color="info" />
+              <GitHubIcon color="primary" />
             </IconButton>
           </Tooltip>
         </DialogActions>

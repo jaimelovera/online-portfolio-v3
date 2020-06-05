@@ -12,19 +12,26 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
-import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
-import MuiDialogTitle from "@material-ui/core/DialogTitle";
-import MuiDialogContent from "@material-ui/core/DialogContent";
-import MuiDialogActions from "@material-ui/core/DialogActions";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogActions from "@material-ui/core/DialogActions";
 import CloseIcon from "@material-ui/icons/Close";
+import Slide from "@material-ui/core/Slide";
 
 // Icons
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LaunchIcon from "@material-ui/icons/Launch";
 
 const styles = (theme) => ({
-  card: {},
+  card: {
+    position: "relative",
+    top: 0,
+    transition: "top linear 0.1s",
+    "&:hover": {
+      top: -8,
+    },
+  },
   root: {
     margin: 0,
     padding: theme.spacing(2),
@@ -33,12 +40,29 @@ const styles = (theme) => ({
     position: "absolute",
     right: theme.spacing(1),
     top: theme.spacing(1),
-    color: theme.palette.grey[500],
+    color: theme.palette.info,
+  },
+  dialogImg: {
+    width: "100%",
+    height: "auto",
   },
 });
 
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
 function ProjectCard(props) {
-  const { classes, image, title, body, visitLink, gitHubLink } = props;
+  const {
+    classes,
+    image,
+    gif,
+    title,
+    body,
+    technologies,
+    visitLink,
+    gitHubLink,
+  } = props;
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -51,16 +75,16 @@ function ProjectCard(props) {
   const visitLinks = (gitHubLink, visitLink) => {
     return (
       <Fragment>
-        <IconButton href={gitHubLink} target="_blank">
-          <Tooltip title="GitHub" placement="top" arrow>
-            <GitHubIcon />
-          </Tooltip>
-        </IconButton>
-        <IconButton href={visitLink} target="_blank">
-          <Tooltip title="Visit" placement="top" arrow>
-            <LaunchIcon />
-          </Tooltip>
-        </IconButton>
+        <Tooltip title="GitHub" placement="top" arrow>
+          <IconButton href={gitHubLink} target="_blank">
+            <GitHubIcon color="info" />
+          </IconButton>
+        </Tooltip>
+        <Tooltip title="Visit" placement="top" arrow>
+          <IconButton href={visitLink} target="_blank">
+            <LaunchIcon color="info" />
+          </IconButton>
+        </Tooltip>
       </Fragment>
     );
   };
@@ -68,41 +92,50 @@ function ProjectCard(props) {
   return (
     <Grid item xs={12} sm={6} md={4}>
       <Card className={classes.card}>
-        <CardActionArea onClick={handleClickOpen}>
-          <CardMedia component="img" image={image} alt={title} />
-          <CardContent>
-            <Typography gutterBottom variant="h5">
-              {title}
-            </Typography>
-            <Typography variant="body1" color="textSecondary">
-              {body}
-            </Typography>
-          </CardContent>
-        </CardActionArea>
+        <Tooltip title="View a quick demo!" placement="top" arrow>
+          <CardActionArea onClick={handleClickOpen}>
+            <CardMedia component="img" image={image} alt={title} />
+            <CardContent style={{ paddingBottom: 0 }}>
+              <Typography gutterBottom variant="h5">
+                {title}
+              </Typography>
+              <Typography variant="body1" color="secondary">
+                {body}
+              </Typography>
+              <div style={{ paddingTop: 10 }}>
+                <Typography variant="caption" color="textSecondary">
+                  {technologies}
+                </Typography>
+              </div>
+            </CardContent>
+          </CardActionArea>
+        </Tooltip>
         <Grid container direction="row" justify="flex-end" alignItems="center">
-          <CardActions>{visitLinks(gitHubLink, visitLink)}</CardActions>
+          <CardActions style={{ padding: 2 }}>
+            {visitLinks(gitHubLink, visitLink)}
+          </CardActions>
         </Grid>
       </Card>
 
       <Dialog
         onClose={handleClose}
-        aria-labelledby="customized-dialog-title"
         open={open}
+        TransitionComponent={Transition}
       >
-        <MuiDialogTitle disableTypography>
-          <Typography variant="h6">{title}</Typography>
+        <DialogTitle disableTypography>
+          <Typography variant="h6">{title} - Demo</Typography>
           <IconButton className={classes.closeButton} onClick={handleClose}>
             <CloseIcon />
           </IconButton>
-        </MuiDialogTitle>
-        <MuiDialogContent dividers>
-          <Typography gutterBottom>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros.
-          </Typography>
-        </MuiDialogContent>
-        <MuiDialogActions>{visitLinks(gitHubLink, visitLink)}</MuiDialogActions>
+        </DialogTitle>
+        <DialogContent dividers>
+          <Grid container>
+            <Grid item>
+              <img src={gif} alt="Project demo" className={classes.dialogImg} />
+            </Grid>
+          </Grid>
+        </DialogContent>
+        <DialogActions>{visitLinks(gitHubLink, visitLink)}</DialogActions>
       </Dialog>
     </Grid>
   );
@@ -110,8 +143,10 @@ function ProjectCard(props) {
 
 ProjectCard.propTypes = {
   image: PropTypes.string.isRequired,
+  gif: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
+  technologies: PropTypes.string.isRequired,
   visitLink: PropTypes.string.isRequired,
   gitHubLink: PropTypes.string.isRequired,
 };

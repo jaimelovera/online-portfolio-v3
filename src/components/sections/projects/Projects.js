@@ -12,7 +12,7 @@ const styles = (theme) => ({
     paddingTop: 120,
   },
   projectsTitle: {
-    margin: "0 0 50px 0",
+    margin: "0 0 20px 0",
   },
 });
 
@@ -42,36 +42,73 @@ function Projects(props) {
         >
           <ProjectCardGridItem
             image={WebDevImg}
+            gif={WebDevImg}
             title="Hello"
             body="the body"
+            technologies="JavaScript, Firebase, React"
             gitHubLink="/"
             visitLink="/"
           />
           <ProjectCardGridItem
             image={WebDevImg}
+            gif={WebDevImg}
             title="Hello"
             body="the body"
+            technologies="JavaScript, Firebase, React"
             gitHubLink="/"
             visitLink="/"
           />
           <ProjectCardGridItem
             image={WebDevImg}
+            gif={WebDevImg}
             title="Hello"
             body="the body"
+            technologies="JavaScript, Firebase, React"
             gitHubLink="/"
             visitLink="/"
           />
           <ProjectCardGridItem
             image={WebDevImg}
+            gif={WebDevImg}
             title="Hello"
             body="the body"
+            technologies="JavaScript, Firebase, React"
             gitHubLink="/"
             visitLink="/"
           />
           <ProjectCardGridItem
             image={WebDevImg}
+            gif={WebDevImg}
             title="Hello"
             body="the body"
+            technologies="JavaScript, Firebase, React"
+            gitHubLink="/"
+            visitLink="/"
+          />
+          <ProjectCardGridItem
+            image={WebDevImg}
+            gif={WebDevImg}
+            title="Hello"
+            body="the body"
+            technologies="JavaScript, Firebase, React"
+            gitHubLink="/"
+            visitLink="/"
+          />
+          <ProjectCardGridItem
+            image={WebDevImg}
+            gif={WebDevImg}
+            title="Hello"
+            body="the body"
+            technologies="JavaScript, Firebase, React"
+            gitHubLink="/"
+            visitLink="/"
+          />
+          <ProjectCardGridItem
+            image={WebDevImg}
+            gif={WebDevImg}
+            title="Hello"
+            body="the body"
+            technologies="JavaScript, Firebase, React"
             gitHubLink="/"
             visitLink="/"
           />

@@ -26,7 +26,7 @@ const styles = (theme) => ({
     },
   },
   footerByLink: {
-    marginTop: 30,
+    marginTop: 20,
     "&:hover": {
       borderBottom: "1px solid #000",
     },

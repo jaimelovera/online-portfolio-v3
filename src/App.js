@@ -4,11 +4,11 @@ import "./App.css";
 
 // Components
 import Navbar from "./components/layout/Navbar";
-import Intro from "./components/sections/Intro";
-import About from "./components/sections/About";
-import Projects from "./components/sections/Projects";
-import Contact from "./components/sections/Contact";
-import Footer from "./components/sections/Footer";
+import Intro from "./components/sections/intro/Intro";
+import About from "./components/sections/about/About";
+import Projects from "./components/sections/projects/Projects";
+import Contact from "./components/sections/contact/Contact";
+import Footer from "./components/sections/footer/Footer";
 
 // Material-UI Stuff
 import {

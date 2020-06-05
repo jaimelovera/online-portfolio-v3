@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import ProfileImg from "../../img/profile-photo.jpg";
-import WebDevImg from "../../img/web-development.png";
+import ProfileImg from "../../../img/profile-photo.jpg";
+import WebDevImg from "../../../img/web-development.png";
 
 // Material-UI Stuff
 import { withStyles } from "@material-ui/core/styles";
@@ -9,24 +9,25 @@ import Typography from "@material-ui/core/Typography";
 import Tooltip from "@material-ui/core/Tooltip";
 
 // Technologies Icons
-import JavaScriptSvg from "../../img/technologies/javascript.svg";
-import PythonSvg from "../../img/technologies/python.svg";
-import ReactSvg from "../../img/technologies/react.svg";
-import MySQLSvg from "../../img/technologies/mysql.svg";
-import MongoDBSvg from "../../img/technologies/mongodb.svg";
-import ExpressSvg from "../../img/technologies/express.svg";
-import NodeJSSvg from "../../img/technologies/nodejs.svg";
-import HTML5Svg from "../../img/technologies/html5.svg";
-import CSS3Svg from "../../img/technologies/css3.svg";
-import DjangoSvg from "../../img/technologies/django.svg";
-import BootStrapSvg from "../../img/technologies/bootstrap.svg";
-import MaterialUISvg from "../../img/technologies/material-ui.svg";
-import ReduxSvg from "../../img/technologies/redux.svg";
-import FirebaseSvg from "../../img/technologies/firebase.svg";
+import JavaScriptSvg from "../../../img/technologies/javascript.svg";
+import PythonSvg from "../../../img/technologies/python.svg";
+import ReactSvg from "../../../img/technologies/react.svg";
+import MySQLSvg from "../../../img/technologies/mysql.svg";
+import MongoDBSvg from "../../../img/technologies/mongodb.svg";
+import ExpressSvg from "../../../img/technologies/express.svg";
+import NodeJSSvg from "../../../img/technologies/nodejs.svg";
+import HTML5Svg from "../../../img/technologies/html5.svg";
+import CSS3Svg from "../../../img/technologies/css3.svg";
+import DjangoSvg from "../../../img/technologies/django.svg";
+import BootStrapSvg from "../../../img/technologies/bootstrap.svg";
+import MaterialUISvg from "../../../img/technologies/material-ui.svg";
+import ReduxSvg from "../../../img/technologies/redux.svg";
+import FirebaseSvg from "../../../img/technologies/firebase.svg";
 
 const styles = (theme) => ({
   sectionContainer: {
     paddingTop: 80,
+    overflow: "hidden",
   },
   profileImg: {
     width: "100%",
@@ -176,7 +177,7 @@ function About(props) {
                     margin: "0 auto 0 auto",
                   }}
                 >
-                  I build responsive websites that work for all devices sizes!
+                  I build responsive websites that work for all device sizes!
                 </Typography>
               </Grid>
             </Grid>

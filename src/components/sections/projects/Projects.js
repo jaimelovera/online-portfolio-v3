@@ -1,4 +1,6 @@
 import React from "react";
+import ProjectCard from "./ProjectCard";
+import WebDevImg from "../../../img/web-development.png";
 
 // Material-UI Stuff
 import { withStyles } from "@material-ui/core/styles";
@@ -11,16 +13,16 @@ const styles = (theme) => ({
   },
 });
 
-function Footer(props) {
+function Projects(props) {
   const { classes } = props;
 
   return (
     <div className={`section-container ${classes.sectionContainer}`}>
       <div className="content-container">
-        <h1>Hello from Footer</h1>
+        <ProjectCard />
       </div>
     </div>
   );
 }
 
-export default withStyles(styles)(Footer);
+export default withStyles(styles)(Projects);

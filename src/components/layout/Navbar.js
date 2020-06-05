@@ -48,9 +48,10 @@ class Navbar extends Component {
               onClick={mobileView ? this.handleDrawerOpenClose : null}
               color="secondary"
               underline="none"
+              variant="body1"
               className={linkStyles}
             >
-              <Typography variant="body1">{item[1]}</Typography>
+              {item[1]}
             </Link>
           );
         })}

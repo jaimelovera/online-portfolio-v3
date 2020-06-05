@@ -1,6 +1,6 @@
 import React from "react";
-import laptopDeskImg from "../../img/desk-laptop-bg.jpg";
-import laptopDeskMobileImg from "../../img/desk-laptop-bg-mobile.jpg";
+import laptopDeskImg from "../../../img/desk-laptop-bg.jpg";
+import laptopDeskMobileImg from "../../../img/desk-laptop-bg-mobile.jpg";
 
 // Material-UI Stuff
 import { withStyles } from "@material-ui/core/styles";

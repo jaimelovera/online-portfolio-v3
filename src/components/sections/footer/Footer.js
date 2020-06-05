@@ -13,7 +13,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 const styles = (theme) => ({
   sectionContainer: {
-    backgroundColor: theme.palette.primary.dark,
+    backgroundColor: theme.palette.primary.main,
     color: theme.palette.grey[100],
     paddingTop: 50,
   },

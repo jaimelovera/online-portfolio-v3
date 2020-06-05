@@ -59,7 +59,7 @@ const styles = (theme) => ({
     padding: "5px 0 5px 0",
   },
   technologiesSection: {
-    paddingTop: 20,
+    paddingTop: 10,
   },
 });
 
@@ -89,7 +89,7 @@ function About(props) {
   const gridLogoItem = (src, alt) => {
     return (
       <Grid item xs={3} sm={2}>
-        <Tooltip title={alt.split(" ")[0]} placement="bottom" arrow>
+        <Tooltip title={alt.split(" ")[0]} placement="top" arrow>
           <img src={src} alt={alt} className={classes.techLogo} />
         </Tooltip>
       </Grid>
@@ -154,7 +154,6 @@ function About(props) {
             </Grid>
           </Grid>
         </Grid>
-
         <Grid container alignItems="center" spacing={3}>
           <Grid item xs={12} sm={6}>
             <Grid container>

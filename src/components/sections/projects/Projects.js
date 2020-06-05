@@ -1,6 +1,6 @@
 import React from "react";
-import ProjectCard from "./ProjectCard";
-import WebDevImg from "../../../img/web-development.png";
+import ProjectCardGridItem from "./ProjectCardGridItem";
+import WebDevImg from "../../../img/desk-laptop-bg.jpg";
 
 // Material-UI Stuff
 import { withStyles } from "@material-ui/core/styles";
@@ -9,7 +9,10 @@ import Typography from "@material-ui/core/Typography";
 
 const styles = (theme) => ({
   sectionContainer: {
-    paddingTop: 50,
+    paddingTop: 120,
+  },
+  projectsTitle: {
+    margin: "0 0 50px 0",
   },
 });
 
@@ -19,7 +22,60 @@ function Projects(props) {
   return (
     <div className={`section-container ${classes.sectionContainer}`}>
       <div className="content-container">
-        <ProjectCard />
+        <Grid
+          container
+          direction="column"
+          justify="flex-start"
+          alignItems="stretch"
+        >
+          <Grid item className={classes.projectsTitle}>
+            <Typography variant="h4">Projects</Typography>
+            <hr />
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          direction="row"
+          justify="flex-start"
+          alignItems="flex-start"
+          spacing={3}
+        >
+          <ProjectCardGridItem
+            image={WebDevImg}
+            title="Hello"
+            body="the body"
+            gitHubLink="/"
+            visitLink="/"
+          />
+          <ProjectCardGridItem
+            image={WebDevImg}
+            title="Hello"
+            body="the body"
+            gitHubLink="/"
+            visitLink="/"
+          />
+          <ProjectCardGridItem
+            image={WebDevImg}
+            title="Hello"
+            body="the body"
+            gitHubLink="/"
+            visitLink="/"
+          />
+          <ProjectCardGridItem
+            image={WebDevImg}
+            title="Hello"
+            body="the body"
+            gitHubLink="/"
+            visitLink="/"
+          />
+          <ProjectCardGridItem
+            image={WebDevImg}
+            title="Hello"
+            body="the body"
+            gitHubLink="/"
+            visitLink="/"
+          />
+        </Grid>
       </div>
     </div>
   );

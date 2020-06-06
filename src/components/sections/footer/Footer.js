@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Material-UI Stuff
 import { withStyles } from "@material-ui/core/styles";
@@ -15,15 +16,16 @@ const styles = (theme) => ({
     backgroundImage: "none",
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.grey[100],
-    paddingTop: 50,
-    paddingBottom: 75,
+    paddingTop: 5,
+    paddingBottom: 25,
   },
-  footerLinkIcons: {
+  footerLinkIcon: {
     fontSize: "2em",
     margin: "40px 12px 12px 12px",
-    color: theme.palette.grey[100],
+    position: "relative",
+    transition: "top linear 0.2s",
     "&:hover": {
-      color: theme.palette.grey[400],
+      top: -2,
     },
   },
   footerByLink: {
@@ -35,7 +37,7 @@ const styles = (theme) => ({
 });
 
 function Footer(props) {
-  const { classes } = props;
+  const { classes, projectGitHubLink, gitHubLink, linkedInLink } = props;
 
   return (
     <div className={`section-container ${classes.sectionContainer}`}>
@@ -43,26 +45,24 @@ function Footer(props) {
         <Grid container direction="column" justify="center" alignItems="center">
           <Hidden lgUp>
             <Grid item xs={12}>
-              <Link
-                href="https://github.com/jaimelovera"
-                target="_blank"
-                underline="none"
-              >
-                <GitHubIcon className={classes.footerLinkIcons} />
+              <Link href={gitHubLink} target="_blank" underline="none">
+                <GitHubIcon
+                  className={classes.footerLinkIcon}
+                  color="secondary"
+                />
               </Link>
-              <Link
-                href="https://www.linkedin.com/in/jaimelovera/"
-                target="_blank"
-                underline="none"
-              >
-                <LinkedInIcon className={classes.footerLinkIcons} />
+              <Link href={linkedInLink} target="_blank" underline="none">
+                <LinkedInIcon
+                  className={classes.footerLinkIcon}
+                  color="secondary"
+                />
               </Link>
             </Grid>
           </Hidden>
           <Grid item xs={12}>
             <div className={classes.footerByLink}>
               <Link
-                href="https://github.com/jaimelovera/online-portfolio-v3"
+                href={projectGitHubLink}
                 target="_blank"
                 underline="none"
                 color="secondary"
@@ -77,5 +77,11 @@ function Footer(props) {
     </div>
   );
 }
+
+Footer.propTypes = {
+  projectGitHubLink: PropTypes.string.isRequired,
+  gitHubLink: PropTypes.string.isRequired,
+  linkedInLink: PropTypes.string.isRequired,
+};
 
 export default withStyles(styles)(Footer);

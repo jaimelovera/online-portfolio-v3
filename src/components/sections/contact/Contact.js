@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Material-UI Stuff
 import { withStyles } from "@material-ui/core/styles";
@@ -24,7 +25,7 @@ const styles = (theme) => ({
 });
 
 function Contact(props) {
-  const { classes } = props;
+  const { classes, email } = props;
 
   return (
     <div className={`section-container ${classes.sectionContainer}`}>
@@ -48,10 +49,13 @@ function Contact(props) {
               </Typography>
             </Grid>
             <Grid item>
+              <Typography variant="subtitle1">{email}</Typography>
+            </Grid>
+            <Grid item>
               <Button
                 variant="contained"
                 color="primary"
-                href="mailto:lovera.jaime@gmail.com"
+                href={`mailto:${email}`}
                 className={classes.contactButton}
               >
                 <Typography variant="subtitle1">Say Hello!</Typography>
@@ -63,5 +67,9 @@ function Contact(props) {
     </div>
   );
 }
+
+Contact.propTypes = {
+  email: PropTypes.string.isRequired,
+};
 
 export default withStyles(styles)(Contact);

@@ -45,6 +45,10 @@ const styles = (theme) => ({
   cardLinkIcons: {
     padding: "4px 12px 12px 12px",
   },
+  projectInfo: {
+    paddingBottom: 0,
+    textAlign: "center",
+  },
 });
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -77,11 +81,11 @@ function ProjectCard(props) {
       <Card className={classes.card}>
         <CardActionArea disabled>
           <CardMedia component="img" image={image} alt={title} />
-          <CardContent style={{ paddingBottom: 0 }}>
+          <CardContent className={classes.projectInfo}>
             <Typography gutterBottom variant="h5">
               {title}
             </Typography>
-            <Typography variant="body1" color="secondary">
+            <Typography variant="body2" color="secondary">
               {body}
             </Typography>
             <div style={{ paddingTop: 10 }}>
@@ -91,7 +95,7 @@ function ProjectCard(props) {
             </div>
           </CardContent>
         </CardActionArea>
-        <Grid container direction="row" justify="flex-end" alignItems="center">
+        <Grid container justify="flex-end">
           <CardActions className={classes.cardLinkIcons}>
             <Tooltip title="Play Demo" placement="top" arrow>
               <IconButton onClick={handleClickOpen}>

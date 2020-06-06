@@ -39,57 +39,51 @@ function Projects(props) {
             <hr />
           </Grid>
         </Grid>
-        <Grid
-          container
-          direction="row"
-          justify="flex-start"
-          alignItems="flex-start"
-          spacing={3}
-        >
+        <Grid container spacing={3}>
           <ProjectCardGridItem
-            image={game2048Img}
+            image={twitterCloneImg}
             demoGif={""}
-            title="Hello"
-            body="the body"
-            technologies="JavaScript, Firebase, React"
-            gitHubLink="/"
-            visitLink="/"
-          />
-          <ProjectCardGridItem
-            image={invDebtVizImg}
-            demoGif={""}
-            title="Hello"
-            body="the body"
-            technologies="JavaScript, Firebase, React"
-            gitHubLink="/"
-            visitLink="/"
-          />
-          <ProjectCardGridItem
-            image={musicLyricFinderImg}
-            demoGif={""}
-            title="Hello"
-            body="the body"
-            technologies="JavaScript, Firebase, React"
-            gitHubLink="/"
-            visitLink="/"
+            title="Twitter Clone"
+            body="A full stack web app that implements features similar to that of Twitter."
+            technologies="Firebase, Express, React, React Router, Axios, Redux, JavaScript, Material-UI, HTML, CSS"
+            gitHubLink="https://github.com/jaimelovera/twitter-clone"
+            visitLink="https://twitter-clone-b442b.web.app/"
           />
           <ProjectCardGridItem
             image={perFinBlogImg}
             demoGif={""}
-            title="Hello"
-            body="the body"
-            technologies="JavaScript, Firebase, React"
-            gitHubLink="/"
-            visitLink="/"
+            title="Personal Finance Blog"
+            body="A responsive Django web app I developed to encourage people to save and invest."
+            technologies="Django, Python, React, JavaScript, Bootstrap, HTML, CSS"
+            gitHubLink="https://github.com/jaimelovera/personal-finance-blog"
+            visitLink="https://jaimelv6.pythonanywhere.com/"
           />
           <ProjectCardGridItem
-            image={twitterCloneImg}
+            image={musicLyricFinderImg}
             demoGif={""}
-            title="Hello"
-            body="the body"
-            technologies="JavaScript, Firebase, React"
-            gitHubLink="/"
-            visitLink="/"
+            title="Music Lyric Finder"
+            body="A react web application for searching music lyrics using Reacts built in context API along with the Musixmatch public API."
+            technologies="React, React Router, React Context API, Axios"
+            gitHubLink="https://github.com/jaimelovera/music-lyric-finder"
+            visitLink="https://music-lyric-finder.netlify.app/"
+          />
+          <ProjectCardGridItem
+            image={invDebtVizImg}
+            demoGif={""}
+            title="Investment Visualizer"
+            body="An Interactive data visualization tool that estimates growth of an investment over time."
+            technologies="React, Recharts, JavaScript, HTML, CSS"
+            gitHubLink="https://github.com/jaimelovera/investment-debt-visualizer"
+            visitLink="https://investment-debt-visualizer.netlify.app/"
+          />
+          <ProjectCardGridItem
+            image={game2048Img}
+            demoGif={""}
+            title="2048 Game Clone"
+            body="A JavaScript implementation of the popular 2048 Game. 🎮"
+            technologies="JavaScript, Bootstrap, HTML, CSS"
+            gitHubLink="https://github.com/jaimelovera/2048-game"
+            visitLink="https://jaimelovera.github.io/2048-game/"
           />
         </Grid>
       </div>

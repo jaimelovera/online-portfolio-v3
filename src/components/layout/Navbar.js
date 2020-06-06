@@ -87,7 +87,6 @@ class Navbar extends Component {
             >
               <Grid
                 container
-                direction="row"
                 justify="flex-end"
                 alignItems="center"
                 className={styles.drawerTopBar}

@@ -20,7 +20,7 @@ export default {
       fontFamily: '"Nunito", sans-serif',
     },
     body2: {
-      fontSize: "1.1rem",
+      fontSize: "1rem",
       fontFamily: '"Nunito", sans-serif',
     },
     subtitle1: {

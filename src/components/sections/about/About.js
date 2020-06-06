@@ -30,6 +30,8 @@ const styles = (theme) => ({
     overflow: "hidden",
   },
   profileImg: {
+    zIndex: 1,
+    position: "relative",
     width: "100%",
     height: "auto",
     maxWidth: 275,
@@ -38,7 +40,7 @@ const styles = (theme) => ({
     borderRadius: 10,
   },
   profileImgBorder: {
-    zIndex: -1,
+    zIndex: 0,
     position: "absolute",
     backgroundColor: theme.palette.primary.main,
     width: "50vw",

@@ -9,7 +9,7 @@ import Typography from "@material-ui/core/Typography";
 
 const styles = (theme) => ({
   sectionContainer: {
-    paddingTop: 60,
+    paddingTop: 100,
   },
   projectsTitle: {
     margin: "0 0 20px 0",

@@ -4,10 +4,22 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
 
 const styles = (theme) => ({
   sectionContainer: {
-    paddingTop: 50,
+    padding: "200px 0 200px 0",
+  },
+  contactContainer: {
+    margin: "0 auto 0 auto",
+    maxWidth: 600,
+  },
+  contactBody: {
+    textAlign: "center",
+    padding: "5px 0 40px 0",
+  },
+  contactButton: {
+    padding: "15px 30px 15px 30px",
   },
 });
 
@@ -17,7 +29,36 @@ function Contact(props) {
   return (
     <div className={`section-container ${classes.sectionContainer}`}>
       <div className="content-container">
-        <h1>Hello from Contact</h1>
+        <div className={classes.contactContainer}>
+          <Grid
+            container
+            direction="column"
+            justify="center"
+            alignItems="center"
+            spacing={2}
+          >
+            <Grid item>
+              <Typography variant="h3">Get In Touch</Typography>
+            </Grid>
+            <Grid item>
+              <Typography variant="body1" className={classes.contactBody}>
+                Whether you have a question or just want to say hi, my inbox is
+                always open. I'll try my best to get back to you as soon as
+                possible!
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Button
+                variant="contained"
+                color="primary"
+                href="mailto:lovera.jaime@gmail.com"
+                className={classes.contactButton}
+              >
+                <Typography variant="subtitle1">Say Hello!</Typography>
+              </Button>
+            </Grid>
+          </Grid>
+        </div>
       </div>
     </div>
   );

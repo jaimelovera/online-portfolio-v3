@@ -3,7 +3,6 @@ import React from "react";
 // Material-UI Stuff
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 import Hidden from "@material-ui/core/Hidden";
 
@@ -13,9 +12,11 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 const styles = (theme) => ({
   sectionContainer: {
+    backgroundImage: "none",
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.grey[100],
     paddingTop: 50,
+    paddingBottom: 75,
   },
   footerLinkIcons: {
     fontSize: "2em",

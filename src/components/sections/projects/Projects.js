@@ -1,11 +1,17 @@
 import React from "react";
 import ProjectCardGridItem from "./ProjectCardGridItem";
-import WebDevImg from "../../../img/desk-laptop-bg.jpg";
 
 // Material-UI Stuff
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+
+// Project Images/Gifs
+import game2048Img from "../../../img/projects/game-2048/2048Game.png";
+import invDebtVizImg from "../../../img/projects/investment-debt-vizualizer/investment-debt-visualizer.png";
+import musicLyricFinderImg from "../../../img/projects/music-lyric-finder/music-lyric-finder.png";
+import perFinBlogImg from "../../../img/projects/personal-finance-blog/personal-finance-blog.png";
+import twitterCloneImg from "../../../img/projects/twitter-clone/twitter-clone.png";
 
 const styles = (theme) => ({
   sectionContainer: {
@@ -41,8 +47,44 @@ function Projects(props) {
           spacing={3}
         >
           <ProjectCardGridItem
-            image={WebDevImg}
-            demoGif={WebDevImg}
+            image={game2048Img}
+            demoGif={""}
+            title="Hello"
+            body="the body"
+            technologies="JavaScript, Firebase, React"
+            gitHubLink="/"
+            visitLink="/"
+          />
+          <ProjectCardGridItem
+            image={invDebtVizImg}
+            demoGif={""}
+            title="Hello"
+            body="the body"
+            technologies="JavaScript, Firebase, React"
+            gitHubLink="/"
+            visitLink="/"
+          />
+          <ProjectCardGridItem
+            image={musicLyricFinderImg}
+            demoGif={""}
+            title="Hello"
+            body="the body"
+            technologies="JavaScript, Firebase, React"
+            gitHubLink="/"
+            visitLink="/"
+          />
+          <ProjectCardGridItem
+            image={perFinBlogImg}
+            demoGif={""}
+            title="Hello"
+            body="the body"
+            technologies="JavaScript, Firebase, React"
+            gitHubLink="/"
+            visitLink="/"
+          />
+          <ProjectCardGridItem
+            image={twitterCloneImg}
+            demoGif={""}
             title="Hello"
             body="the body"
             technologies="JavaScript, Firebase, React"

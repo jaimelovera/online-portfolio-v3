@@ -49,51 +49,6 @@ function Projects(props) {
             gitHubLink="/"
             visitLink="/"
           />
-          <ProjectCardGridItem
-            image={WebDevImg}
-            demoGif={WebDevImg}
-            title="Hello"
-            body="the body"
-            technologies="JavaScript, Firebase, React"
-            gitHubLink="/"
-            visitLink="/"
-          />
-          <ProjectCardGridItem
-            image={WebDevImg}
-            demoGif={WebDevImg}
-            title="Hello"
-            body="the body"
-            technologies="JavaScript, Firebase, React"
-            gitHubLink="/"
-            visitLink="/"
-          />
-          <ProjectCardGridItem
-            image={WebDevImg}
-            demoGif={WebDevImg}
-            title="Hello"
-            body="the body"
-            technologies="JavaScript, Firebase, React"
-            gitHubLink="/"
-            visitLink="/"
-          />
-          <ProjectCardGridItem
-            image={WebDevImg}
-            demoGif={WebDevImg}
-            title="Hello"
-            body="the body"
-            technologies="JavaScript, Firebase, React"
-            gitHubLink="/"
-            visitLink="/"
-          />
-          <ProjectCardGridItem
-            image={WebDevImg}
-            demoGif={WebDevImg}
-            title="Hello"
-            body="the body"
-            technologies="JavaScript, Firebase, React"
-            gitHubLink="/"
-            visitLink="/"
-          />
         </Grid>
       </div>
     </div>

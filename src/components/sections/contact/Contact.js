@@ -9,10 +9,11 @@ import Button from "@material-ui/core/Button";
 
 const styles = (theme) => ({
   sectionContainer: {
-    padding: "200px 0 200px 0",
+    paddingTop: 120,
   },
   contactContainer: {
-    margin: "0 auto 0 auto",
+    padding: "140px 0",
+    margin: "0 auto",
     maxWidth: 600,
   },
   contactBody: {
@@ -20,7 +21,7 @@ const styles = (theme) => ({
     padding: "5px 0 40px 0",
   },
   contactButton: {
-    padding: "15px 30px 15px 30px",
+    padding: "15px 30px",
   },
 });
 
@@ -30,6 +31,8 @@ function Contact(props) {
   return (
     <div className={`section-container ${classes.sectionContainer}`}>
       <div className="content-container">
+        <Typography variant="h4">Contact</Typography>
+        <hr />
         <div className={classes.contactContainer}>
           <Grid
             container

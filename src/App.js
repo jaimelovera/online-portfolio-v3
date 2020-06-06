@@ -3,7 +3,7 @@ import themeFile from "./util/theme";
 import "./App.css";
 
 // Components
-import Navbar from "./components/layout/Navbar";
+import Navbar from "./components/layout/NavBar/Navbar";
 import SideContactBar from "./components/layout/SideContactBar";
 import Intro from "./components/sections/intro/Intro";
 import About from "./components/sections/about/About";

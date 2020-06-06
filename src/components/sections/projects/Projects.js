@@ -28,18 +28,13 @@ function Projects(props) {
   return (
     <div className={`section-container ${classes.sectionContainer}`}>
       <div className="content-container">
-        <Grid
-          container
-          direction="column"
-          justify="flex-start"
-          alignItems="stretch"
-        >
+        <Grid container direction="column" alignItems="stretch">
           <Grid item className={classes.projectsTitle}>
             <Typography variant="h4">Projects</Typography>
             <hr />
           </Grid>
         </Grid>
-        <Grid container spacing={3}>
+        <Grid container alignItems="stretch" spacing={3}>
           <ProjectCardGridItem
             image={twitterCloneImg}
             demoGif={""}

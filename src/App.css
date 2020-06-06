@@ -24,6 +24,6 @@ a {
 
 .content-container {
   /* Every section component has this class as the first child of the section-container */
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   max-width: 1000px;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import logoImg from "../../img/name-logo.png";
-import resume from "../../pdf/jaimelovera-resume.pdf";
-import HideOnScroll from "../../util/HideOnScroll";
+import logoImg from "../../../img/name-logo.png";
+import resume from "../../../pdf/jaimelovera-resume.pdf";
+import HideOnScroll from "../../../util/HideOnScroll";
 
 // Material-UI stuff
 import IconButton from "@material-ui/core/IconButton";

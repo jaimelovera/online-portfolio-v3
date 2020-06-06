@@ -47,6 +47,7 @@ export default {
       fontWeight: 700,
     },
     h6: {
+      fontSize: "1.16rem",
       fontFamily: '"Nunito", sans-serif',
       fontWeight: 700,
     },

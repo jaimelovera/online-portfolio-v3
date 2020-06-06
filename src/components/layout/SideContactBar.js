@@ -24,7 +24,7 @@ const styles = (theme) => ({
   endLine: {
     backgroundColor: theme.palette.secondary.main,
     width: 1,
-    height: "25vh",
+    height: "100px",
     marginTop: 10,
   },
   linkIconButton: {

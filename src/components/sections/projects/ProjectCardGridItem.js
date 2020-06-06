@@ -26,6 +26,10 @@ import OndemandVideoIcon from "@material-ui/icons/OndemandVideo";
 
 const styles = (theme) => ({
   card: {
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
     position: "relative",
     top: 0,
     transition: "top linear 0.1s",
@@ -42,12 +46,10 @@ const styles = (theme) => ({
     width: "100%",
     height: "auto",
   },
-  cardLinkIcons: {
-    padding: "4px 12px 12px 12px",
-  },
-  projectInfo: {
-    paddingBottom: 0,
+  cardChild: {
     textAlign: "center",
+    paddingTop: 0,
+    paddingBottom: 0,
   },
 });
 
@@ -69,7 +71,7 @@ function ProjectCard(props) {
 
   const [open, setOpen] = React.useState(false);
 
-  const handleClickOpen = () => {
+  const handleOpen = () => {
     setOpen(true);
   };
   const handleClose = () => {
@@ -79,26 +81,27 @@ function ProjectCard(props) {
   return (
     <Grid item xs={12} sm={6} md={4}>
       <Card className={classes.card}>
-        <CardActionArea disabled>
-          <CardMedia component="img" image={image} alt={title} />
-          <CardContent className={classes.projectInfo}>
-            <Typography gutterBottom variant="h5">
-              {title}
-            </Typography>
-            <Typography variant="body2" color="secondary">
-              {body}
-            </Typography>
-            <div style={{ paddingTop: 10 }}>
-              <Typography variant="caption" color="textSecondary">
-                {technologies}
-              </Typography>
-            </div>
-          </CardContent>
-        </CardActionArea>
-        <Grid container justify="flex-end">
-          <CardActions className={classes.cardLinkIcons}>
+        <CardContent className={classes.cardChild}>
+          <CardActionArea onClick={handleOpen}>
+            <CardMedia component="img" image={image} alt={title} />
+          </CardActionArea>
+          <Typography gutterBottom variant="h5" style={{ paddingTop: 14 }}>
+            {title}
+          </Typography>
+          <Typography gutterBottom variant="body2" color="secondary">
+            {body}
+          </Typography>
+        </CardContent>
+        <CardContent
+          className={classes.cardChild}
+          style={{ paddingTop: 14, paddingBottom: 0 }}
+        >
+          <Typography variant="caption" color="textSecondary">
+            {technologies}
+          </Typography>
+          <CardActions style={{ justifyContent: "flex-end" }}>
             <Tooltip title="Play Demo" placement="top" arrow>
-              <IconButton onClick={handleClickOpen}>
+              <IconButton onClick={handleOpen}>
                 <OndemandVideoIcon color="primary" />
               </IconButton>
             </Tooltip>
@@ -113,7 +116,7 @@ function ProjectCard(props) {
               </IconButton>
             </Tooltip>
           </CardActions>
-        </Grid>
+        </CardContent>
       </Card>
 
       <Dialog

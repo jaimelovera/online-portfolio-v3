@@ -70,23 +70,18 @@ function About(props) {
   const { classes } = props;
 
   const aboutMarkup = (
-    <Fragment>
-      <Typography variant="h4">About Me</Typography>
-      <hr />
-      <Typography variant="body1">
-        Nisl altera incorrupte per at, no per exerci nusquam iracundia, cu pro
-        lobortis ocurreret. Pri at cetero suscipit. Per at denique ancillae
-        argumentum, ei sint inermis omittantur vix. Latine qualisque erroribus
-        ut cum. Nisl altera incorrupte per at, no per exerci nusquam iracundia,
-        cu pro lobortis ocurreret. Pri at cetero suscipit. Per at denique
-        ancillae argumentum, ei sint inermis omittantur vix. Latine qualisque
-        erroribus ut cum. Nisl altera incorrupte per at, no per exerci nusquam
-        iracundia, cu pro lobortis ocurreret. Pri at cetero suscipit. Per at
-        denique ancillae argumentum, ei sint inermis omittantur vix. Latine
-        qualisque erroribus ut cum.
-      </Typography>
-      <hr />
-    </Fragment>
+    <Typography variant="body1">
+      Nisl altera incorrupte per at, no per exerci nusquam iracundia, cu pro
+      lobortis ocurreret. Pri at cetero suscipit. Per at denique ancillae
+      argumentum, ei sint inermis omittantur vix. Latine qualisque erroribus ut
+      cum. Nisl altera incorrupte per at, no per exerci nusquam iracundia, cu
+      pro lobortis ocurreret. Pri at cetero suscipit. Per at denique ancillae
+      argumentum, ei sint inermis omittantur vix. Latine qualisque erroribus ut
+      cum. Nisl altera incorrupte per at, no per exerci nusquam iracundia, cu
+      pro lobortis ocurreret. Pri at cetero suscipit. Per at denique ancillae
+      argumentum, ei sint inermis omittantur vix. Latine qualisque erroribus ut
+      cum.
+    </Typography>
   );
 
   const gridTechLogoItem = (src, alt) => {
@@ -101,7 +96,7 @@ function About(props) {
 
   const technologiesMarkUp = (
     <Fragment>
-      <Typography variant="body1">
+      <Typography variant="h6">
         Technologies I've worked with the most:
       </Typography>
       <Grid container spacing={1}>
@@ -112,7 +107,7 @@ function About(props) {
         {gridTechLogoItem(PythonSvg, "Python Logo")}
         {gridTechLogoItem(MySQLSvg, "MySQL Logo")}
       </Grid>
-      <Typography variant="body1" className={classes.technologiesSection}>
+      <Typography variant="h6" className={classes.technologiesSection}>
         Technologies I've been working with recently:
       </Typography>
       <Grid container spacing={1}>
@@ -123,7 +118,7 @@ function About(props) {
         {gridTechLogoItem(ExpressSvg, "Express Logo")}
         {gridTechLogoItem(ReduxSvg, "Redux Logo")}
       </Grid>
-      <Typography variant="body1" className={classes.technologiesSection}>
+      <Typography variant="h6" className={classes.technologiesSection}>
         Technologies I've used in the past:
       </Typography>
       <Grid container spacing={1}>
@@ -136,6 +131,8 @@ function About(props) {
   return (
     <div className={`section-container ${classes.sectionContainer}`}>
       <div className="content-container">
+        <Typography variant="h4">About Me</Typography>
+        <hr />
         <Grid container alignItems="center" spacing={3}>
           <Grid item xs={12} sm={6}>
             <Grid container>

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import logoImg from "../../../img/name-logo.png";
 
 // Material-UI Stuff
 import { withStyles } from "@material-ui/core/styles";
@@ -16,8 +17,7 @@ const styles = (theme) => ({
     backgroundImage: "none",
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.grey[100],
-    paddingTop: 5,
-    paddingBottom: 25,
+    padding: 20,
   },
   footerLinkIcon: {
     fontSize: "2em",
@@ -29,9 +29,21 @@ const styles = (theme) => ({
     },
   },
   footerByLink: {
-    marginTop: 20,
+    borderBottom: "1px solid transparent",
     "&:hover": {
       borderBottom: "1px solid #000",
+    },
+  },
+  logoImg: {
+    padding: 20,
+    height: 45,
+    width: "auto",
+    MozTransition: "all 0.2s ease-in",
+    OTransition: "all 0.2s ease-in",
+    WebkitTransition: "all 0.2s ease-in",
+    transition: "all 0.2s ease-in",
+    "&:hover": {
+      filter: "saturate(250%)",
     },
   },
 });
@@ -60,17 +72,25 @@ function Footer(props) {
             </Grid>
           </Hidden>
           <Grid item xs={12}>
-            <div className={classes.footerByLink}>
-              <Link
-                href={projectGitHubLink}
-                target="_blank"
-                underline="none"
-                color="secondary"
-                variant="body1"
-              >
-                Designed & Built by Jaime Lovera
-              </Link>
-            </div>
+            <Grid container justify="center" alignItems="center" spacing={1}>
+              <Grid item>
+                <a href="/">
+                  <img src={logoImg} alt="Logo" className={classes.logoImg} />
+                </a>
+              </Grid>
+              <Grid item>
+                <Link
+                  href={projectGitHubLink}
+                  target="_blank"
+                  underline="none"
+                  color="secondary"
+                  variant="body1"
+                  className={classes.footerByLink}
+                >
+                  Designed & Built by Jaime Lovera
+                </Link>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </div>

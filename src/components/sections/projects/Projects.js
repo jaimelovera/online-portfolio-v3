@@ -9,7 +9,7 @@ import Typography from "@material-ui/core/Typography";
 
 const styles = (theme) => ({
   sectionContainer: {
-    paddingTop: 120,
+    paddingTop: 60,
   },
   projectsTitle: {
     margin: "0 0 20px 0",
@@ -40,6 +40,51 @@ function Projects(props) {
           alignItems="flex-start"
           spacing={3}
         >
+          <ProjectCardGridItem
+            image={WebDevImg}
+            demoGif={WebDevImg}
+            title="Hello"
+            body="the body"
+            technologies="JavaScript, Firebase, React"
+            gitHubLink="/"
+            visitLink="/"
+          />
+          <ProjectCardGridItem
+            image={WebDevImg}
+            demoGif={WebDevImg}
+            title="Hello"
+            body="the body"
+            technologies="JavaScript, Firebase, React"
+            gitHubLink="/"
+            visitLink="/"
+          />
+          <ProjectCardGridItem
+            image={WebDevImg}
+            demoGif={WebDevImg}
+            title="Hello"
+            body="the body"
+            technologies="JavaScript, Firebase, React"
+            gitHubLink="/"
+            visitLink="/"
+          />
+          <ProjectCardGridItem
+            image={WebDevImg}
+            demoGif={WebDevImg}
+            title="Hello"
+            body="the body"
+            technologies="JavaScript, Firebase, React"
+            gitHubLink="/"
+            visitLink="/"
+          />
+          <ProjectCardGridItem
+            image={WebDevImg}
+            demoGif={WebDevImg}
+            title="Hello"
+            body="the body"
+            technologies="JavaScript, Firebase, React"
+            gitHubLink="/"
+            visitLink="/"
+          />
           <ProjectCardGridItem
             image={WebDevImg}
             demoGif={WebDevImg}

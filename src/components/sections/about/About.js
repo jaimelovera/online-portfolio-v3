@@ -10,19 +10,19 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 // Technologies Icons
 import JavaScriptSvg from "../../../img/technologies/javascript.svg";
-import PythonSvg from "../../../img/technologies/python.svg";
-import ReactSvg from "../../../img/technologies/react.svg";
-import MySQLSvg from "../../../img/technologies/mysql.svg";
-import MongoDBSvg from "../../../img/technologies/mongodb.svg";
-import ExpressSvg from "../../../img/technologies/express.svg";
-import NodeJSSvg from "../../../img/technologies/nodejs.svg";
-import HTML5Svg from "../../../img/technologies/html5.svg";
-import CSS3Svg from "../../../img/technologies/css3.svg";
-import DjangoSvg from "../../../img/technologies/django.svg";
 import BootStrapSvg from "../../../img/technologies/bootstrap.svg";
 import MaterialUISvg from "../../../img/technologies/material-ui.svg";
-import ReduxSvg from "../../../img/technologies/redux.svg";
 import FirebaseSvg from "../../../img/technologies/firebase.svg";
+import MongoDBSvg from "../../../img/technologies/mongodb.svg";
+import ExpressSvg from "../../../img/technologies/express.svg";
+import DjangoSvg from "../../../img/technologies/django.svg";
+import PythonSvg from "../../../img/technologies/python.svg";
+import NodeJSSvg from "../../../img/technologies/nodejs.svg";
+import ReactSvg from "../../../img/technologies/react.svg";
+import MySQLSvg from "../../../img/technologies/mysql.svg";
+import HTML5Svg from "../../../img/technologies/html5.svg";
+import ReduxSvg from "../../../img/technologies/redux.svg";
+import CSS3Svg from "../../../img/technologies/css3.svg";
 
 const styles = (theme) => ({
   sectionContainer: {
@@ -54,12 +54,13 @@ const styles = (theme) => ({
   techLogo: {
     width: "100%",
     height: "auto",
-    maxWidth: 45,
-    maxHeight: 45,
+    maxWidth: 38,
+    maxHeight: 38,
     padding: "5px 0 5px 0",
   },
-  technologiesSection: {
-    paddingTop: 10,
+  technologiesContainer: {
+    padding: "20px 0 40px 0",
+    alignItems: "center",
   },
 });
 
@@ -86,9 +87,9 @@ function About(props) {
     </Fragment>
   );
 
-  const gridLogoItem = (src, alt) => {
+  const gridTechLogoItem = (src, alt) => {
     return (
-      <Grid item xs={3} sm={2}>
+      <Grid item xs={2}>
         <Tooltip title={alt.split(" ")[0]} placement="top" arrow>
           <img src={src} alt={alt} className={classes.techLogo} />
         </Tooltip>
@@ -98,34 +99,34 @@ function About(props) {
 
   const technologiesMarkUp = (
     <Fragment>
-      <Typography variant="h6" className={classes.technologiesSection}>
+      <Typography variant="body1">
         Technologies I've worked with the most:
       </Typography>
-      <Grid container>
-        {gridLogoItem(ReactSvg, "React Logo")}
-        {gridLogoItem(JavaScriptSvg, "JavaScript Logo")}
-        {gridLogoItem(HTML5Svg, "HTML5 Logo")}
-        {gridLogoItem(CSS3Svg, "CSS3 Logo")}
-        {gridLogoItem(PythonSvg, "Python Logo")}
-        {gridLogoItem(MySQLSvg, "MySQL Logo")}
+      <Grid container spacing={1}>
+        {gridTechLogoItem(ReactSvg, "React Logo")}
+        {gridTechLogoItem(JavaScriptSvg, "JavaScript Logo")}
+        {gridTechLogoItem(HTML5Svg, "HTML5 Logo")}
+        {gridTechLogoItem(CSS3Svg, "CSS3 Logo")}
+        {gridTechLogoItem(PythonSvg, "Python Logo")}
+        {gridTechLogoItem(MySQLSvg, "MySQL Logo")}
       </Grid>
-      <Typography variant="h6" className={classes.technologiesSection}>
+      <Typography variant="body1" className={classes.technologiesSection}>
         Technologies I've been working with recently:
       </Typography>
-      <Grid container>
-        {gridLogoItem(MaterialUISvg, "Material-UI Logo")}
-        {gridLogoItem(FirebaseSvg, "Firebase Logo")}
-        {gridLogoItem(MongoDBSvg, "MongoDB Logo")}
-        {gridLogoItem(NodeJSSvg, "NodeJS Logo")}
-        {gridLogoItem(ExpressSvg, "Express Logo")}
-        {gridLogoItem(ReduxSvg, "Redux Logo")}
+      <Grid container spacing={1}>
+        {gridTechLogoItem(MaterialUISvg, "Material-UI Logo")}
+        {gridTechLogoItem(FirebaseSvg, "Firebase Logo")}
+        {gridTechLogoItem(MongoDBSvg, "MongoDB Logo")}
+        {gridTechLogoItem(NodeJSSvg, "NodeJS Logo")}
+        {gridTechLogoItem(ExpressSvg, "Express Logo")}
+        {gridTechLogoItem(ReduxSvg, "Redux Logo")}
       </Grid>
-      <Typography variant="h6" className={classes.technologiesSection}>
+      <Typography variant="body1" className={classes.technologiesSection}>
         Technologies I've used in the past:
       </Typography>
-      <Grid container>
-        {gridLogoItem(BootStrapSvg, "Bootstrap Logo")}
-        {gridLogoItem(DjangoSvg, "Django Logo")}
+      <Grid container spacing={1}>
+        {gridTechLogoItem(BootStrapSvg, "Bootstrap Logo")}
+        {gridTechLogoItem(DjangoSvg, "Django Logo")}
       </Grid>
     </Fragment>
   );
@@ -156,8 +157,15 @@ function About(props) {
         </Grid>
         <Grid container alignItems="center" spacing={3}>
           <Grid item xs={12} sm={6}>
-            <Grid container>
-              <Grid item>{technologiesMarkUp}</Grid>
+            <Grid
+              container
+              direction="row"
+              justify="center"
+              alignItems="flex-start"
+            >
+              <Grid item className={classes.technologiesContainer}>
+                {technologiesMarkUp}
+              </Grid>
             </Grid>
           </Grid>
           <Grid item xs={12} sm={6}>

@@ -11,10 +11,12 @@ a {
 }
 
 .section-container {
-  padding: 64px 10px 64px 10px;
+  /* Every section component has this class as the parent div */
+  padding: 64px 20px 64px 20px;
 }
 
 .content-container {
+  /* Every section component has this class as the first child of the section-container */
   margin: 0 auto 0 auto;
   max-width: 1000px;
 }

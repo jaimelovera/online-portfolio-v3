@@ -33,10 +33,6 @@ const styles = (theme) => ({
       top: -8,
     },
   },
-  root: {
-    margin: 0,
-    padding: theme.spacing(2),
-  },
   closeButton: {
     position: "absolute",
     right: theme.spacing(1),
@@ -46,6 +42,9 @@ const styles = (theme) => ({
   dialogImg: {
     width: "100%",
     height: "auto",
+  },
+  cardLinkIcons: {
+    padding: "4px 12px 12px 12px",
   },
 });
 
@@ -94,7 +93,7 @@ function ProjectCard(props) {
           </CardContent>
         </CardActionArea>
         <Grid container direction="row" justify="flex-end" alignItems="center">
-          <CardActions style={{ padding: 2 }}>
+          <CardActions className={classes.cardLinkIcons}>
             <Tooltip title="Play Demo" placement="top" arrow>
               <IconButton onClick={handleClickOpen}>
                 <OndemandVideoIcon color="primary" />

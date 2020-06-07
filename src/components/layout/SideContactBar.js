@@ -28,9 +28,13 @@ const styles = (theme) => ({
     marginTop: 10,
   },
   linkIconButton: {
+    margin: 4,
+    backgroundColor: "#EAEAEA",
+    border: "1px solid #000",
     position: "relative",
     transition: "top linear 0.2s",
     "&:hover": {
+      backgroundColor: "#FFF",
       right: -2,
     },
   },

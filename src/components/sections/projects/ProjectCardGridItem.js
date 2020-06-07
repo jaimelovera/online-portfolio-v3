@@ -17,6 +17,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 // Icons
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -70,6 +71,7 @@ function ProjectCard(props) {
   } = props;
 
   const [open, setOpen] = React.useState(false);
+  const [imgLoaded, setImgLoaded] = React.useState(false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -78,12 +80,22 @@ function ProjectCard(props) {
     setOpen(false);
   };
 
+  const handleImgLoaded = () => {
+    setImgLoaded(true);
+  };
+
   return (
     <Grid item xs={12} sm={6} md={4}>
       <Card className={classes.card}>
         <CardContent className={classes.cardChild}>
           <CardActionArea onClick={handleOpen}>
-            <CardMedia component="img" image={image} alt={title} />
+            {!imgLoaded && <CircularProgress size={150} thickness={2} />}
+            <CardMedia
+              component="img"
+              image={image}
+              alt={title}
+              onLoad={handleImgLoaded}
+            />
           </CardActionArea>
           <Typography gutterBottom variant="h5" style={{ paddingTop: 14 }}>
             {title}

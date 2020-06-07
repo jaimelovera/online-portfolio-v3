@@ -135,6 +135,7 @@ function ProjectCard(props) {
         onClose={handleClose}
         open={open}
         TransitionComponent={Transition}
+        maxWidth="md"
       >
         <DialogTitle disableTypography>
           <Typography variant="h6">{title} - Demo</Typography>
@@ -146,7 +147,7 @@ function ProjectCard(props) {
           <Grid container>
             <Grid item>
               <img
-                src={demoGif}
+                src={open ? demoGif : ""}
                 alt="Project demo"
                 className={classes.dialogImg}
               />

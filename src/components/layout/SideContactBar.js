@@ -12,6 +12,7 @@ import Hidden from "@material-ui/core/Hidden";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
 
 const styles = (theme) => ({
   container: {
@@ -66,6 +67,16 @@ function SideContactBar(props) {
                 className={classes.linkIconButton}
               >
                 <LinkedInIcon color="secondary" />
+              </IconButton>
+            </Tooltip>
+          </Grid>
+          <Grid item>
+            <Tooltip title="Email" placement="right" arrow>
+              <IconButton
+                href={`mailto:${email}`}
+                className={classes.linkIconButton}
+              >
+                <MailOutlineIcon color="secondary" />
               </IconButton>
             </Tooltip>
           </Grid>

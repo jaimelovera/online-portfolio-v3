@@ -26,7 +26,6 @@ import CSS3Svg from "../../../img/technologies/css3.svg";
 
 const styles = (theme) => ({
   sectionContainer: {
-    paddingTop: 80,
     overflow: "hidden",
   },
   profileImg: {

@@ -8,9 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 
 const styles = (theme) => ({
-  sectionContainer: {
-    paddingTop: 120,
-  },
+  sectionContainer: {},
   contactContainer: {
     padding: "140px 0",
     margin: "0 auto",

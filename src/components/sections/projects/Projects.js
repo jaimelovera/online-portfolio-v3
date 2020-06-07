@@ -14,9 +14,7 @@ import perFinBlogImg from "../../../img/projects/personal-finance-blog/personal-
 import twitterCloneImg from "../../../img/projects/twitter-clone/twitter-clone.png";
 
 const styles = (theme) => ({
-  sectionContainer: {
-    paddingTop: 100,
-  },
+  sectionContainer: {},
   projectsTitle: {
     margin: "0 0 20px 0",
   },

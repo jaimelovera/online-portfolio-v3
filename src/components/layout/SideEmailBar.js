@@ -1,3 +1,5 @@
+// Decided not to use this component, but it works if I ever decide to use it!
+
 import React from "react";
 import PropTypes from "prop-types";
 

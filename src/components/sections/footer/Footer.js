@@ -14,10 +14,10 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 const styles = (theme) => ({
   sectionContainer: {
+    padding: 20,
     backgroundImage: "none",
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.grey[100],
-    padding: 20,
   },
   footerLinkIcon: {
     fontSize: "2em",

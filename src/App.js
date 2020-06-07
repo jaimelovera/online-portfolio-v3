@@ -5,6 +5,7 @@ import "./App.css";
 // Components
 import Navbar from "./components/layout/NavBar/Navbar";
 import SideContactBar from "./components/layout/SideContactBar";
+import SideEmailBar from "./components/layout/SideEmailBar";
 import Intro from "./components/sections/intro/Intro";
 import About from "./components/sections/about/About";
 import Projects from "./components/sections/projects/Projects";
@@ -36,6 +37,7 @@ function App() {
         linkedInLink={linkedInLink}
         email={email}
       />
+      <SideEmailBar email={email} />
       <div id="intro">
         <Intro />
       </div>

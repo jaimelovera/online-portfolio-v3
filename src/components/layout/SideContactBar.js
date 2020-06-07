@@ -29,7 +29,7 @@ const styles = (theme) => ({
   },
   linkIconButton: {
     margin: 4,
-    backgroundColor: "#EAEAEA",
+    backgroundColor: "#DCF3FF",
     border: "1px solid #000",
     position: "relative",
     transition: "top linear 0.2s",
@@ -66,17 +66,6 @@ function SideContactBar(props) {
                 className={classes.linkIconButton}
               >
                 <LinkedInIcon color="secondary" />
-              </IconButton>
-            </Tooltip>
-          </Grid>
-          <Grid item>
-            <Tooltip title="Email" placement="right" arrow>
-              <IconButton
-                href={`mailto:${email}`}
-                target="_blank"
-                className={classes.linkIconButton}
-              >
-                <EmailIcon color="secondary" />
               </IconButton>
             </Tooltip>
           </Grid>

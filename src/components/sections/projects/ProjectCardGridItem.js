@@ -89,7 +89,7 @@ function ProjectCard(props) {
       <Card className={classes.card}>
         <CardContent className={classes.cardChild}>
           <CardActionArea onClick={handleOpen}>
-            {!imgLoaded && <CircularProgress size={150} thickness={2} />}
+            {!imgLoaded && <CircularProgress size={140} thickness={2} />}
             <CardMedia
               component="img"
               image={image}

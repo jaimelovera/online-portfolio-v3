@@ -20,6 +20,9 @@ const styles = (theme) => ({
     backgroundImage: "none",
     backgroundColor: theme.palette.primary.main,
     color: theme.palette.grey[100],
+    [theme.breakpoints.down("sm")]: {
+      paddingBottom: 60,
+    },
   },
   footerLinkIcon: {
     fontSize: "2em",
@@ -77,8 +80,6 @@ function Footer(props) {
               <Grid item>
                 <MyHoverLink
                   href={projectGitHubLink}
-                  target="_blank"
-                  underline="none"
                   color="secondary"
                   variant="body1"
                 >

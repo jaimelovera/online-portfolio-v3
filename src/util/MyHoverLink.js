@@ -10,6 +10,7 @@ const styles = (theme) => ({
   primary: {
     color: theme.palette.primary.dark,
     display: "inline-block",
+    textDecoration: "none",
     "&:hover": { textDecoration: "none" },
     "&:after": {
       content: "''",
@@ -30,6 +31,7 @@ const styles = (theme) => ({
   },
   secondary: {
     color: theme.palette.secondary.main,
+    textDecoration: "none",
     display: "inline-block",
     "&:hover": { textDecoration: "none" },
     "&:after": {

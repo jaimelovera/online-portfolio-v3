@@ -87,7 +87,6 @@ function Navbar(props) {
             href={item[0]}
             onClick={mobileView ? handleDrawerClose : null}
             color="secondary"
-            underline="none"
             variant="body1"
             className={`${linkStyles}`}
           >

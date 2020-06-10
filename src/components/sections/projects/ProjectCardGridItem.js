@@ -95,12 +95,19 @@ function ProjectCard(props) {
       <Card className={classes.card}>
         <CardContent className={classes.cardChild}>
           <CardActionArea onClick={handleOpen}>
-            {!imgLoaded && <CircularProgress size={140} thickness={2} />}
+            {!imgLoaded && (
+              <CircularProgress
+                size={140}
+                thickness={1}
+                style={{ padding: "20px 80px" }}
+              />
+            )}
             <CardMedia
               component="img"
               image={image}
               alt={title}
               onLoad={handleImgLoaded}
+              style={{ display: imgLoaded ? "initial" : "none" }}
             />
           </CardActionArea>
           <Typography gutterBottom variant="h5" style={{ paddingTop: 14 }}>
@@ -152,13 +159,19 @@ function ProjectCard(props) {
         <DialogContent dividers>
           <Grid container>
             <Grid item>
-              {!gifLoaded && <CircularProgress size={140} thickness={2} />}
+              {!gifLoaded && (
+                <CircularProgress
+                  size={180}
+                  thickness={1}
+                  style={{ padding: "20px 80px" }}
+                />
+              )}
               <img
                 src={open ? demoGif : ""}
                 alt="Project demo"
                 onLoad={handleGifLoaded}
-                className={classes.dialogImg}
                 style={{ display: gifLoaded ? "initial" : "none" }}
+                className={classes.dialogImg}
               />
             </Grid>
           </Grid>

@@ -62,8 +62,8 @@ function MyHoverLink(props) {
 
   return (
     <Link
-      {...props}
       target="_blank"
+      {...props}
       className={`${className} ${color === "secondary" ? secondary : primary}`}
     >
       {props.children}

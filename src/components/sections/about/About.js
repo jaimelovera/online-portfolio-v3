@@ -49,18 +49,19 @@ function About(props) {
 
   const aboutMarkup = (
     <Typography variant="body1">
-      Hi, I'm a graduate from <MyHoverLink href="/">UCSD</MyHoverLink>
-      's Management Science program. During my time there I leveraged a program
-      named MatLab to solve mathematical problems. This was my first
-      introduction to 'for loops' and the ability to systematically program a
-      computer to make decisions. As my interest grew, I began adding computer
-      science courses to my curriculum. This helped me build a strong foundation
-      of computer science topics and best practices. Since graduation, I have
-      worked as a data analyst, collaborating with a team of software developers
-      to help build a data driven product. In addition to the experience I have
-      gained in my professional role, I have continued my education through a
-      self-taught curriculum. I'm passionate about building for the web, and
-      excited for the future of web development!
+      I'm a graduate from the Management Science program at{" "}
+      <MyHoverLink href="https://ucsd.edu/">UCSD</MyHoverLink>, a quantitative
+      major in applied economics. During my time there, I used a program called
+      MatLab to solve constraint problems. This was my introduction to 'for
+      loops' and the ability to systematically program a computer to make
+      decisions. I was fascinated. I began adding computer science courses to my
+      curriculum. I studied topics ranging from data structures all the way to
+      lower level programming with Assembly. Since graduating, I have worked as
+      a data analyst, collaborating with a team of software developers to help
+      build data driven products. In addition to the experience I have gained in
+      my professional role, I have continued my education through a self-taught
+      curriculum. I'm passionate about building for the web and excited for the
+      future of web development!
     </Typography>
   );
 

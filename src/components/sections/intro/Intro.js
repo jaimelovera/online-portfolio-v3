@@ -75,6 +75,8 @@ function Intro(props) {
               >
                 I'm an aspiring software developer based in San Diego, CA
                 specializing in building exceptional websites and applications.
+                I also happen to be data literate, working alongside software
+                developers as a data analyst building data-driven products.
               </Typography>
             </Grid>
           </Grid>

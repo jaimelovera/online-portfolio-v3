@@ -72,16 +72,22 @@ function ProjectCard(props) {
 
   const [open, setOpen] = React.useState(false);
   const [imgLoaded, setImgLoaded] = React.useState(false);
+  const [gifLoaded, setGifLoaded] = React.useState(false);
 
   const handleOpen = () => {
     setOpen(true);
   };
   const handleClose = () => {
     setOpen(false);
+    setGifLoaded(false);
   };
 
   const handleImgLoaded = () => {
     setImgLoaded(true);
+  };
+
+  const handleGifLoaded = () => {
+    setGifLoaded(true);
   };
 
   return (
@@ -146,10 +152,13 @@ function ProjectCard(props) {
         <DialogContent dividers>
           <Grid container>
             <Grid item>
+              {!gifLoaded && <CircularProgress size={140} thickness={2} />}
               <img
                 src={open ? demoGif : ""}
                 alt="Project demo"
+                onLoad={handleGifLoaded}
                 className={classes.dialogImg}
+                style={{ display: gifLoaded ? "initial" : "none" }}
               />
             </Grid>
           </Grid>

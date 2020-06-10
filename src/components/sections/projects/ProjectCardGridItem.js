@@ -61,7 +61,7 @@ function ProjectCard(props) {
   const {
     classes,
     image,
-    demoGif,
+    demoGifSrc,
     title,
     body,
     technologies,
@@ -98,7 +98,7 @@ function ProjectCard(props) {
               <CircularProgress
                 size={140}
                 thickness={1}
-                style={{ padding: "20px 60px" }}
+                style={{ padding: 20 }}
               />
             )}
             <CardMedia
@@ -148,6 +148,7 @@ function ProjectCard(props) {
         open={open}
         TransitionComponent={Transition}
         maxWidth="md"
+        fullWidth
       >
         <DialogTitle disableTypography>
           <Typography variant="h6">{title} - Demo</Typography>
@@ -162,11 +163,11 @@ function ProjectCard(props) {
                 <CircularProgress
                   size={140}
                   thickness={1}
-                  style={{ padding: "20px 60px" }}
+                  style={{ padding: "60px 0" }}
                 />
               )}
               <img
-                src={open ? demoGif : ""}
+                src={open ? demoGifSrc : ""}
                 alt="Project demo"
                 onLoad={handleGifLoaded}
                 style={{ display: gifLoaded ? "initial" : "none" }}
@@ -194,7 +195,7 @@ function ProjectCard(props) {
 
 ProjectCard.propTypes = {
   image: PropTypes.string.isRequired,
-  demoGif: PropTypes.string.isRequired,
+  demoGifSrc: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   technologies: PropTypes.string.isRequired,

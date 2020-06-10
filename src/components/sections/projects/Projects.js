@@ -41,7 +41,7 @@ function Projects(props) {
         <Grid container alignItems="stretch" spacing={3}>
           <ProjectCardGridItem
             image={twitterCloneImg}
-            demoGif={twitterCloneGif}
+            demoGifSrc={twitterCloneGif}
             title="Twitter Clone"
             body="A full stack web app that implements features similar to that of Twitter."
             technologies="Firebase, Express, React, React Router, Axios, Redux, JavaScript, Material-UI, HTML, CSS"
@@ -50,7 +50,7 @@ function Projects(props) {
           />
           <ProjectCardGridItem
             image={perFinBlogImg}
-            demoGif={perFinBlogGif}
+            demoGifSrc={perFinBlogGif}
             title="Personal Finance Blog"
             body="A responsive Django web app I developed to encourage people to save and invest."
             technologies="Django, Python, React, JavaScript, Bootstrap, HTML, CSS"
@@ -59,7 +59,7 @@ function Projects(props) {
           />
           <ProjectCardGridItem
             image={musicLyricFinderImg}
-            demoGif={musicLyricFinderGif}
+            demoGifSrc={musicLyricFinderGif}
             title="Music Lyric Finder"
             body="A react web application for searching music lyrics using Reacts built in context API along with the Musixmatch public API."
             technologies="React, React Router, React Context API, Axios"
@@ -68,7 +68,7 @@ function Projects(props) {
           />
           <ProjectCardGridItem
             image={invDebtVizImg}
-            demoGif={invDebtVizGif}
+            demoGifSrc={invDebtVizGif}
             title="Investment Visualizer"
             body="An Interactive data visualization tool that estimates growth of an investment over time."
             technologies="React, Recharts, JavaScript, HTML, CSS"
@@ -77,7 +77,7 @@ function Projects(props) {
           />
           <ProjectCardGridItem
             image={game2048Img}
-            demoGif={game2048Gif}
+            demoGifSrc={game2048Gif}
             title="2048 Game Clone"
             body="A JavaScript implementation of the popular 2048 Game. 🎮"
             technologies="JavaScript, Bootstrap, HTML, CSS"

@@ -49,7 +49,6 @@ const styles = (theme) => ({
   },
   cardChild: {
     textAlign: "center",
-    paddingTop: 0,
     paddingBottom: 0,
   },
 });
@@ -99,7 +98,7 @@ function ProjectCard(props) {
               <CircularProgress
                 size={140}
                 thickness={1}
-                style={{ padding: "20px 80px" }}
+                style={{ padding: "20px 60px" }}
               />
             )}
             <CardMedia
@@ -157,13 +156,13 @@ function ProjectCard(props) {
           </IconButton>
         </DialogTitle>
         <DialogContent dividers>
-          <Grid container>
+          <Grid container direction="row" justify="center" alignItems="center">
             <Grid item>
               {!gifLoaded && (
                 <CircularProgress
-                  size={180}
+                  size={140}
                   thickness={1}
-                  style={{ padding: "20px 80px" }}
+                  style={{ padding: "20px 60px" }}
                 />
               )}
               <img

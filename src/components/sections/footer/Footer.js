@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 import logoImg from "../../../img/name-logo.png";
 
 // Material-UI Stuff
@@ -13,6 +14,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 const styles = (theme) => ({
+  ...theme.globalStyles,
   sectionContainer: {
     padding: 20,
     backgroundImage: "none",
@@ -26,12 +28,6 @@ const styles = (theme) => ({
     transition: "top linear 0.2s",
     "&:hover": {
       top: -2,
-    },
-  },
-  footerByLink: {
-    borderBottom: "1px solid transparent",
-    "&:hover": {
-      borderBottom: "1px solid #000",
     },
   },
   logoImg: {
@@ -85,7 +81,7 @@ function Footer(props) {
                   underline="none"
                   color="secondary"
                   variant="body1"
-                  className={classes.footerByLink}
+                  className={classes.hoverUnderlineAnimation}
                 >
                   Designed & Built by Jaime Lovera
                 </Link>

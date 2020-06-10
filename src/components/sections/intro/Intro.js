@@ -73,10 +73,8 @@ function Intro(props) {
                 variant="body1"
                 className={`${classes.longInfo} ${classes.textShadowPrimary}`}
               >
-                Nisl altera incorrupte per at, no per exerci nusquam iracundia,
-                cu pro lobortis ocurreret. Pri at cetero suscipit. Per at
-                denique ancillae argumentum, ei sint inermis omittantur vix.
-                Latine qualisque erroribus ut cum.
+                I'm an aspiring software developer based in San Diego, CA
+                specializing in building exceptional websites and applications.
               </Typography>
             </Grid>
           </Grid>

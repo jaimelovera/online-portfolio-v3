@@ -52,4 +52,5 @@ export default {
       fontWeight: 700,
     },
   },
+  globalStyles: {},
 };

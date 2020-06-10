@@ -1,9 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import logoImg from "../../../img/name-logo.png";
 import resume from "../../../pdf/jaimelovera-resume.pdf";
 import HideOnScroll from "../../../util/HideOnScroll";
+import MyHoverLink from "../../../util/MyHoverLink";
 
 // Material-UI stuff
+import { withStyles } from "@material-ui/core/styles";
 import IconButton from "@material-ui/core/IconButton";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import AppBar from "@material-ui/core/AppBar";
@@ -18,111 +20,145 @@ import Typography from "@material-ui/core/Typography";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 
-import styles from "./Navbar.module.css";
+const styles = (theme) => ({
+  navContainer: {
+    justifyContent: "space-between",
+    margin: "0 20px 0 20px",
+  },
+  logoImg: {
+    height: 56,
+    width: "auto",
+    MozTransition: "all 0.2s ease-in",
+    OTransition: "all 0.2s ease-in",
+    WebkitTransition: "all 0.2s ease-in",
+    transition: "all 0.2s ease-in",
+    "&:hover": {
+      filter: "saturate(250%)",
+    },
+  },
+  navLinks: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    alignItems: "center",
+  },
+  navLink: {
+    margin: "0 20px 0 20px !important",
+  },
+  resumeLink: {
+    border: "1px solid #000",
+    borderRadius: 4,
+  },
+  drawerTopBar: {
+    minWidth: "50vw",
+    padding: "5px 35px 5px 35px",
+  },
+  navLinksDrawer: {
+    flexDirection: "column",
+    marginTop: 10,
+  },
+  navLinkDrawer: {
+    fontSize: "1.15em",
+    margin: "20px !important",
+  },
+});
 
-class Navbar extends Component {
-  state = {
-    drawerOpen: false,
+function Navbar(props) {
+  const { classes } = props;
+  const [drawerOpen, setDrawerState] = React.useState(false);
+
+  const handleDrawerOpen = () => {
+    setDrawerState(true);
+  };
+  const handleDrawerClose = () => {
+    setDrawerState(false);
   };
 
-  handleDrawerOpenClose = () => {
-    this.setState((prevState) => ({
-      drawerOpen: !prevState.drawerOpen,
-    }));
-  };
-
-  render() {
-    const { drawerOpen } = this.state;
-
-    const navLinks = (linkStyles, linksContainerStyles, mobileView = false) => (
-      <div className={linksContainerStyles}>
-        {[
-          ["#about", "About"],
-          ["#projects", "Projects"],
-          ["#contact", "Contact"],
-        ].map((item) => {
-          return (
-            <Link
-              key={item[0]}
-              href={item[0]}
-              onClick={mobileView ? this.handleDrawerOpenClose : null}
-              color="secondary"
-              underline="none"
-              variant="body1"
-              className={linkStyles}
-            >
-              {item[1]}
-            </Link>
-          );
-        })}
-        <Link
-          href={resume}
-          target="_blank"
-          rel="noreferrer"
-          color="secondary"
-          underline="none"
-          className={`${linkStyles} ${styles.resumeLink}`}
-        >
-          <Button
-            variant="contained"
-            color={!mobileView ? "primary" : "default"}
+  const navLinks = (linkStyles, linksContainerStyles, mobileView = false) => (
+    <div className={linksContainerStyles}>
+      {[
+        ["#about", "About"],
+        ["#projects", "Projects"],
+        ["#contact", "Contact"],
+      ].map((item) => {
+        return (
+          <MyHoverLink
+            key={item[0]}
+            href={item[0]}
+            onClick={mobileView ? handleDrawerClose : null}
+            color="secondary"
+            underline="none"
+            variant="body1"
+            className={`${linkStyles}`}
           >
-            <Typography variant="body1">Resume</Typography>
-          </Button>
-        </Link>
-      </div>
-    );
+            {item[1]}
+          </MyHoverLink>
+        );
+      })}
+      <Link
+        href={resume}
+        target="_blank"
+        rel="noreferrer"
+        color="secondary"
+        underline="none"
+        className={`${linkStyles} ${classes.resumeLink}`}
+      >
+        <Button variant="contained" color={!mobileView ? "primary" : "default"}>
+          <Typography variant="body1">Resume</Typography>
+        </Button>
+      </Link>
+    </div>
+  );
 
-    return (
-      <HideOnScroll>
-        <AppBar color="primary">
-          <Toolbar className={styles.navContainer}>
-            {/* Empty onOpen function to remove PropType isRequired error.
+  return (
+    <HideOnScroll>
+      <AppBar color="primary">
+        <Toolbar className={classes.navContainer}>
+          {/* Empty onOpen function to remove PropType isRequired error.
             I dont need it... */}
-            <SwipeableDrawer
-              anchor={"right"}
-              open={drawerOpen}
-              onClose={this.handleDrawerOpenClose}
-              onOpen={() => {}}
+          <SwipeableDrawer
+            anchor={"right"}
+            open={drawerOpen}
+            onClose={handleDrawerClose}
+            onOpen={() => {}}
+          >
+            <Grid
+              container
+              justify="flex-end"
+              alignItems="center"
+              className={classes.drawerTopBar}
             >
-              <Grid
-                container
-                justify="flex-end"
-                alignItems="center"
-                className={styles.drawerTopBar}
+              <IconButton
+                className={classes.menuButton}
+                onClick={handleDrawerClose}
               >
-                <IconButton
-                  className={styles.menuButton}
-                  onClick={this.handleDrawerOpenClose}
-                >
-                  <CloseIcon />
-                </IconButton>
-              </Grid>
-              {navLinks(
-                `${styles.navLink} ${styles.navLinkDrawer}`,
-                `${styles.navLinks} ${styles.navLinksDrawer}`,
-                true
-              )}
-            </SwipeableDrawer>
-            <a href="/">
-              <img src={logoImg} alt="Logo" className={styles.logoImg} />
-            </a>
-            <Hidden xsDown>{navLinks(styles.navLink, styles.navLinks)}</Hidden>
-            <Hidden smUp>
-              {!drawerOpen && (
-                <IconButton
-                  className={styles.menuButton}
-                  onClick={this.handleDrawerOpenClose}
-                >
-                  <MenuIcon />
-                </IconButton>
-              )}
-            </Hidden>
-          </Toolbar>
-        </AppBar>
-      </HideOnScroll>
-    );
-  }
+                <CloseIcon />
+              </IconButton>
+            </Grid>
+            {navLinks(
+              `${classes.navLink} ${classes.navLinkDrawer}`,
+              `${classes.navLinks} ${classes.navLinksDrawer}`,
+              true
+            )}
+          </SwipeableDrawer>
+          <a href="/">
+            <img src={logoImg} alt="Logo" className={classes.logoImg} />
+          </a>
+          <Hidden xsDown>{navLinks(classes.navLink, classes.navLinks)}</Hidden>
+          <Hidden smUp>
+            {!drawerOpen && (
+              <IconButton
+                className={classes.menuButton}
+                onClick={handleDrawerOpen}
+              >
+                <MenuIcon />
+              </IconButton>
+            )}
+          </Hidden>
+        </Toolbar>
+      </AppBar>
+    </HideOnScroll>
+  );
 }
 
-export default Navbar;
+export default withStyles(styles)(Navbar);

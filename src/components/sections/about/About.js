@@ -1,4 +1,7 @@
-import React, { Fragment } from "react";
+import React from "react";
+import Technologies from "./Technologies";
+
+import MyHoverLink from "../../../util/MyHoverLink";
 import ProfileImg from "../../../img/profile-photo.jpg";
 import WebDevImg from "../../../img/web-development.png";
 
@@ -6,23 +9,6 @@ import WebDevImg from "../../../img/web-development.png";
 import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import Tooltip from "@material-ui/core/Tooltip";
-
-// Technologies Icons
-import JavaScriptSvg from "../../../img/technologies/javascript.svg";
-import BootStrapSvg from "../../../img/technologies/bootstrap.svg";
-import MaterialUISvg from "../../../img/technologies/material-ui.svg";
-import FirebaseSvg from "../../../img/technologies/firebase.svg";
-import MongoDBSvg from "../../../img/technologies/mongodb.svg";
-import ExpressSvg from "../../../img/technologies/express.svg";
-import DjangoSvg from "../../../img/technologies/django.svg";
-import PythonSvg from "../../../img/technologies/python.svg";
-import NodeJSSvg from "../../../img/technologies/nodejs.svg";
-import ReactSvg from "../../../img/technologies/react.svg";
-import MySQLSvg from "../../../img/technologies/mysql.svg";
-import HTML5Svg from "../../../img/technologies/html5.svg";
-import ReduxSvg from "../../../img/technologies/redux.svg";
-import CSS3Svg from "../../../img/technologies/css3.svg";
 
 const styles = (theme) => ({
   sectionContainer: {
@@ -52,13 +38,6 @@ const styles = (theme) => ({
     height: "auto",
     maxWidth: 400,
   },
-  techLogo: {
-    width: "100%",
-    height: "auto",
-    maxWidth: 38,
-    maxHeight: 38,
-    padding: "5px 0 5px 0",
-  },
   technologiesContainer: {
     padding: "20px 0 40px 0",
     alignItems: "center",
@@ -70,61 +49,19 @@ function About(props) {
 
   const aboutMarkup = (
     <Typography variant="body1">
-      Nisl altera incorrupte per at, no per exerci nusquam iracundia, cu pro
-      lobortis ocurreret. Pri at cetero suscipit. Per at denique ancillae
-      argumentum, ei sint inermis omittantur vix. Latine qualisque erroribus ut
-      cum. Nisl altera incorrupte per at, no per exerci nusquam iracundia, cu
-      pro lobortis ocurreret. Pri at cetero suscipit. Per at denique ancillae
-      argumentum, ei sint inermis omittantur vix. Latine qualisque erroribus ut
-      cum. Nisl altera incorrupte per at, no per exerci nusquam iracundia, cu
-      pro lobortis ocurreret. Pri at cetero suscipit. Per at denique ancillae
-      argumentum, ei sint inermis omittantur vix. Latine qualisque erroribus ut
-      cum.
+      Hi, I'm a graduate from <MyHoverLink href="/">UCSD</MyHoverLink>
+      's Management Science program. During my time there I leveraged a program
+      named MatLab to solve mathematical problems. This was my first
+      introduction to 'for loops' and the ability to systematically program a
+      computer to make decisions. As my interest grew, I began adding computer
+      science courses to my curriculum. This helped me build a strong foundation
+      of computer science topics and best practices. Since graduation, I have
+      worked as a data analyst, collaborating with a team of software developers
+      to help build a data driven product. In addition to the experience I have
+      gained in my professional role, I have continued my education through a
+      self-taught curriculum. I'm passionate about building for the web, and
+      excited for the future of web development!
     </Typography>
-  );
-
-  const gridTechLogoItem = (src, alt) => {
-    return (
-      <Grid item xs={2}>
-        <Tooltip title={alt.split(" ")[0]} placement="top" arrow>
-          <img src={src} alt={alt} className={classes.techLogo} />
-        </Tooltip>
-      </Grid>
-    );
-  };
-
-  const technologiesMarkUp = (
-    <Fragment>
-      <Typography variant="h6">
-        Technologies I've worked with the most:
-      </Typography>
-      <Grid container spacing={1}>
-        {gridTechLogoItem(ReactSvg, "React Logo")}
-        {gridTechLogoItem(JavaScriptSvg, "JavaScript Logo")}
-        {gridTechLogoItem(HTML5Svg, "HTML5 Logo")}
-        {gridTechLogoItem(CSS3Svg, "CSS3 Logo")}
-        {gridTechLogoItem(PythonSvg, "Python Logo")}
-        {gridTechLogoItem(MySQLSvg, "MySQL Logo")}
-      </Grid>
-      <Typography variant="h6" className={classes.technologiesSection}>
-        Technologies I've been working with recently:
-      </Typography>
-      <Grid container spacing={1}>
-        {gridTechLogoItem(MaterialUISvg, "Material-UI Logo")}
-        {gridTechLogoItem(FirebaseSvg, "Firebase Logo")}
-        {gridTechLogoItem(MongoDBSvg, "MongoDB Logo")}
-        {gridTechLogoItem(NodeJSSvg, "NodeJS Logo")}
-        {gridTechLogoItem(ExpressSvg, "Express Logo")}
-        {gridTechLogoItem(ReduxSvg, "Redux Logo")}
-      </Grid>
-      <Typography variant="h6" className={classes.technologiesSection}>
-        Technologies I've used in the past:
-      </Typography>
-      <Grid container spacing={1}>
-        {gridTechLogoItem(BootStrapSvg, "Bootstrap Logo")}
-        {gridTechLogoItem(DjangoSvg, "Django Logo")}
-      </Grid>
-    </Fragment>
   );
 
   return (
@@ -132,14 +69,14 @@ function About(props) {
       <div className="content-container">
         <Typography variant="h4">About Me</Typography>
         <hr />
-        <Grid container alignItems="center" spacing={3}>
+        <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
             <Grid container>
               <Grid item>{aboutMarkup}</Grid>
             </Grid>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Grid container justify="center">
+            <Grid container justify="center" alignItems="center">
               <Grid item>
                 <div style={{ position: "relative" }}>
                   <div className={classes.profileImgBorder} />
@@ -162,7 +99,7 @@ function About(props) {
               alignItems="flex-start"
             >
               <Grid item className={classes.technologiesContainer}>
-                {technologiesMarkUp}
+                <Technologies />
               </Grid>
             </Grid>
           </Grid>

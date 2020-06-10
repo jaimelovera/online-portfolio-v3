@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import MyHoverLink from "../../../util/MyHoverLink";
 
 import logoImg from "../../../img/name-logo.png";
 
@@ -14,7 +15,6 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 const styles = (theme) => ({
-  ...theme.globalStyles,
   sectionContainer: {
     padding: 20,
     backgroundImage: "none",
@@ -75,16 +75,15 @@ function Footer(props) {
                 </a>
               </Grid>
               <Grid item>
-                <Link
+                <MyHoverLink
                   href={projectGitHubLink}
                   target="_blank"
                   underline="none"
                   color="secondary"
                   variant="body1"
-                  className={classes.hoverUnderlineAnimation}
                 >
                   Designed & Built by Jaime Lovera
-                </Link>
+                </MyHoverLink>
               </Grid>
             </Grid>
           </Grid>

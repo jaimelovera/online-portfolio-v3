@@ -33,7 +33,7 @@ const styles = (theme) => ({
     transform: "translateY(calc(-100vh - 100px))",
   },
   jaimeLoveraAnimate: {
-    animation: "slideFromTop 1.25s forwards",
+    animation: "slideFromTop 1.5s forwards",
     animationDelay: "1s",
   },
   shortInfo: {
@@ -41,7 +41,7 @@ const styles = (theme) => ({
     transform: "translateY(calc(-100vh - 100px))",
   },
   shortInfoAnimate: {
-    animation: "slideFromTop 0.75s forwards",
+    animation: "slideFromTop 0.5s forwards",
     animationDelay: "3s",
   },
   longInfo: {
@@ -51,8 +51,8 @@ const styles = (theme) => ({
     transform: "translateX(calc(-100vw - 500px))",
   },
   longInfoAnimate: {
-    animation: "slideFromLeft 1s forwards",
-    animationDelay: "4.5s",
+    animation: "slideFromLeft 1.5s forwards",
+    animationDelay: "4s",
   },
 });
 
@@ -108,10 +108,8 @@ class Intro extends Component {
                   } ${pageLoaded && classes.longInfoAnimate}`}
                 >
                   I'm an aspiring software developer based in San Diego, CA
-                  specializing in building exceptional websites and
-                  applications. I also happen to be data literate, working
-                  alongside software developers as a data analyst building
-                  data-driven products.
+                  specializing in building exceptional websites, applications,
+                  and anything else that lives on the web.
                 </Typography>
               </Grid>
             </Grid>

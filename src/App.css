@@ -5,6 +5,7 @@ body {
   background-color: #90a4ae;
   font-family: sans-serif, "Roboto";
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 a {

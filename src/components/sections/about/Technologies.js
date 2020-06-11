@@ -24,9 +24,7 @@ import CSS3Svg from "../../../img/technologies/css3.svg";
 function Technologies() {
   return (
     <Fragment>
-      <Typography variant="h6">
-        Technologies I've worked with the most:
-      </Typography>
+      <Typography variant="h6">Worked with the most:</Typography>
       <Grid container spacing={1}>
         <GridTechLogoItem src={ReactSvg} alt="React Logo" />
         <GridTechLogoItem src={JavaScriptSvg} alt="JavaScript Logo" />
@@ -35,9 +33,7 @@ function Technologies() {
         <GridTechLogoItem src={PythonSvg} alt="Python Logo" />
         <GridTechLogoItem src={MySQLSvg} alt="MySQL Logo" />
       </Grid>
-      <Typography variant="h6">
-        Technologies I've been working with recently:
-      </Typography>
+      <Typography variant="h6">Working with recently:</Typography>
       <Grid container spacing={1}>
         <GridTechLogoItem src={MaterialUISvg} alt="Material-UI Logo" />
         <GridTechLogoItem src={FirebaseSvg} alt="Firebase Logo" />
@@ -46,7 +42,7 @@ function Technologies() {
         <GridTechLogoItem src={ExpressSvg} alt="Express Logo" />
         <GridTechLogoItem src={ReduxSvg} alt="Redux Logo" />
       </Grid>
-      <Typography variant="h6">Technologies I've used in the past:</Typography>
+      <Typography variant="h6">Used in the past:</Typography>
       <Grid container spacing={1}>
         <GridTechLogoItem src={BootStrapSvg} alt="Bootstrap Logo" />
         <GridTechLogoItem src={DjangoSvg} alt="Django Logo" />

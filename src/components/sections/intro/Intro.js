@@ -31,15 +31,15 @@ const styles = (theme) => ({
     transform: "translateY(calc(-100vh - 100px))",
   },
   jaimeLoveraAnimate: {
-    animation: "slideFromTop 1.5s forwards",
+    animation: "slideFromY 1.75s forwards",
     animationDelay: "1s",
   },
   shortInfo: {
     position: "relative",
-    transform: "translateY(calc(-100vh - 100px))",
+    transform: "translateX(calc(-100vw - 1000px))",
   },
   shortInfoAnimate: {
-    animation: "slideFromTop 0.5s forwards",
+    animation: "slideFromX 3s forwards",
     animationDelay: "3s",
   },
   longInfo: {
@@ -49,8 +49,8 @@ const styles = (theme) => ({
     transform: "translateX(calc(-100vw - 500px))",
   },
   longInfoAnimate: {
-    animation: "slideFromLeft 1.5s forwards",
-    animationDelay: "4s",
+    animation: "slideFromX 1.5s forwards",
+    animationDelay: "4.5s",
   },
 });
 

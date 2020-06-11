@@ -45,13 +45,13 @@ a {
   }
 }
 
-@keyframes slideFromTop {
+@keyframes slideFromY {
   100% {
     transform: translateY(0);
   }
 }
 
-@keyframes slideFromLeft {
+@keyframes slideFromX {
   100% {
     transform: translateX(0);
   }

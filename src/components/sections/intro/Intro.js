@@ -32,7 +32,7 @@ const styles = (theme) => ({
   },
   jaimeLoveraAnimate: {
     animation: "slideFromY 1.75s forwards",
-    animationDelay: "1s",
+    animationDelay: "0.75s",
   },
   shortInfo: {
     position: "relative",
@@ -40,7 +40,7 @@ const styles = (theme) => ({
   },
   shortInfoAnimate: {
     animation: "slideFromX 3s forwards",
-    animationDelay: "2.75s",
+    animationDelay: "2.5s",
   },
   longInfo: {
     maxWidth: 500,
@@ -50,7 +50,7 @@ const styles = (theme) => ({
   },
   longInfoAnimate: {
     animation: "slideFromX 1.5s forwards",
-    animationDelay: "4.25s",
+    animationDelay: "4s",
   },
 });
 

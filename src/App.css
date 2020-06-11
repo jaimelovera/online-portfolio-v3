@@ -2,7 +2,7 @@
 
 html,
 body {
-  background-color: #90a4ae;
+  background-color: #90a4ae; /* Material UI's Theme Primary Color */
   font-family: sans-serif, "Roboto";
   margin: 0;
   scroll-behavior: smooth;

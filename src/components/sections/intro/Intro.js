@@ -46,7 +46,7 @@ const styles = (theme) => ({
   },
   longInfo: {
     maxWidth: 500,
-    padding: "20px 0 160px 0",
+    padding: "20px 0 140px 0",
     position: "relative",
     transform: "translateX(calc(-100vw - 500px))",
   },

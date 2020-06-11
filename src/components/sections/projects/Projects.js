@@ -6,18 +6,12 @@ import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
-// Project Images/Gifs
-import game2048Img from "../../../img/projects/game-2048/2048Game.png";
-import game2048Gif from "../../../img/projects/game-2048/2048Game.gif";
-import invDebtVizImg from "../../../img/projects/investment-debt-vizualizer/investment-debt-visualizer.png";
-import invDebtVizGif from "../../../img/projects/investment-debt-vizualizer/investment-debt-visualizer.gif";
-import musicLyricFinderImg from "../../../img/projects/music-lyric-finder/music-lyric-finder.png";
-import musicLyricFinderGif from "../../../img/projects/music-lyric-finder/music-lyric-finder.gif";
-import perFinBlogImg from "../../../img/projects/personal-finance-blog/personal-finance-blog.png";
-import perFinBlogGif from "../../../img/projects/personal-finance-blog/personal-finance-blog.gif";
-
-import twitterCloneImg from "../../../img/projects/twitter-clone/twitter-clone.png";
-import twitterCloneGif from "../../../img/projects/twitter-clone/twitter-clone.gif";
+// Project Images
+import game2048Img from "../../../img/projects/2048Game.png";
+import invDebtVizImg from "../../../img/projects/investment-debt-visualizer.png";
+import musicLyricFinderImg from "../../../img/projects/music-lyric-finder.png";
+import perFinBlogImg from "../../../img/projects/personal-finance-blog.png";
+import twitterCloneImg from "../../../img/projects/twitter-clone.png";
 
 const styles = (theme) => ({
   ...theme.globalStyles,
@@ -44,7 +38,6 @@ function Projects(props) {
         <Grid container alignItems="stretch" spacing={3}>
           <ProjectCardGridItem
             image={twitterCloneImg}
-            demoGifSrc={twitterCloneGif}
             title="Twitter Clone"
             body="A full stack web app that implements features similar to that of Twitter."
             technologies="Firebase, Express, React, React Router, Axios, Redux, JavaScript, Material-UI, HTML, CSS"
@@ -53,7 +46,6 @@ function Projects(props) {
           />
           <ProjectCardGridItem
             image={perFinBlogImg}
-            demoGifSrc={perFinBlogGif}
             title="Personal Finance Blog"
             body="A responsive Django web app I developed to encourage people to save and invest."
             technologies="Django, Python, React, JavaScript, Bootstrap, HTML, CSS"
@@ -62,7 +54,6 @@ function Projects(props) {
           />
           <ProjectCardGridItem
             image={musicLyricFinderImg}
-            demoGifSrc={musicLyricFinderGif}
             title="Music Lyric Finder"
             body="A react web application for searching music lyrics using Reacts built in context API along with the Musixmatch public API."
             technologies="React, React Router, React Context API, Axios"
@@ -71,7 +62,6 @@ function Projects(props) {
           />
           <ProjectCardGridItem
             image={invDebtVizImg}
-            demoGifSrc={invDebtVizGif}
             title="Investment Visualizer"
             body="An Interactive data visualization tool that estimates growth of an investment over time."
             technologies="React, Recharts, JavaScript, HTML, CSS"
@@ -80,7 +70,6 @@ function Projects(props) {
           />
           <ProjectCardGridItem
             image={game2048Img}
-            demoGifSrc={game2048Gif}
             title="2048 Game Clone"
             body="A JavaScript implementation of the popular 2048 Game. 🎮"
             technologies="JavaScript, Bootstrap, HTML, CSS"

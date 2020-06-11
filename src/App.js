@@ -5,6 +5,7 @@ import "./App.css";
 // Components
 import Navbar from "./components/layout/NavBar/Navbar";
 import SideContactBar from "./components/layout/SideContactBar";
+import PageLoadingSpinner from "./util/PageLoadingSpinner";
 import Intro from "./components/sections/intro/Intro";
 import About from "./components/sections/about/About";
 import Projects from "./components/sections/projects/Projects";
@@ -47,6 +48,7 @@ class App extends Component {
           linkedInLink={linkedInLink}
           email={email}
         />
+        <PageLoadingSpinner pageLoaded={pageLoaded} />
         <div
           className={pageLoaded ? "app-animate-on-load" : "app-page-loading"}
         >

@@ -36,21 +36,21 @@ const styles = (theme) => ({
   },
   shortInfo: {
     position: "relative",
-    transform: "translateX(calc(-100vw - 1000px))",
+    transform: "translateX(calc(-100vw))",
   },
   shortInfoAnimate: {
-    animation: "slideFromX 3s forwards",
-    animationDelay: "2s",
+    animation: "slideFromX 1.5s forwards",
+    animationDelay: "3s",
   },
   longInfo: {
     maxWidth: 500,
     padding: "20px 0 140px 0",
     position: "relative",
-    transform: "translateX(calc(-100vw - 500px))",
+    transform: "translateX(calc(-100vw))",
   },
   longInfoAnimate: {
-    animation: "slideFromX 1.5s forwards",
-    animationDelay: "3.5s",
+    animation: "slideFromX 2.5s forwards",
+    animationDelay: "3s",
   },
 });
 

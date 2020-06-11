@@ -8,6 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 
 const styles = (theme) => ({
+  ...theme.globalStyles,
   sectionContainer: {},
   contactContainer: {
     padding: "140px 0",
@@ -29,7 +30,9 @@ function Contact(props) {
   return (
     <div className={`section-container ${classes.sectionContainer}`}>
       <div className="content-container">
-        <Typography variant="h4">Contact</Typography>
+        <Typography variant="h4" className={classes.textShadowWhite}>
+          Contact
+        </Typography>
         <hr />
         <div className={classes.contactContainer}>
           <Grid
@@ -40,17 +43,27 @@ function Contact(props) {
             spacing={2}
           >
             <Grid item>
-              <Typography variant="h3">Get In Touch</Typography>
+              <Typography variant="h3" className={classes.textShadowWhite}>
+                Get In Touch
+              </Typography>
             </Grid>
             <Grid item>
-              <Typography variant="body1" className={classes.contactBody}>
+              <Typography
+                variant="body1"
+                className={`${classes.contactBody} ${classes.textShadowWhite}`}
+              >
                 Whether you have a question or just want to say hi, my inbox is
                 always open. I'll try my best to get back to you as soon as
                 possible!
               </Typography>
             </Grid>
             <Grid item>
-              <Typography variant="subtitle1">{email}</Typography>
+              <Typography
+                variant="subtitle1"
+                className={classes.textShadowWhite}
+              >
+                {email}
+              </Typography>
             </Grid>
             <Grid item>
               <Button

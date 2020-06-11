@@ -8,6 +8,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
 const styles = (theme) => ({
+  ...theme.globalStyles,
   sectionContainer: {
     padding: 0,
   },
@@ -20,9 +21,6 @@ const styles = (theme) => ({
       borderRadius: "0 0 50% 50%/4%",
       backgroundImage: `linear-gradient(to bottom,rgba(144, 164, 174, 0.8), rgba(144, 164, 174, 0.8)),url(${laptopDeskImg})`,
     },
-  },
-  textShadowPrimary: {
-    textShadow: "#90a4ae 1px 0 10px",
   },
   myNameIs: {
     fontWeight: 400,

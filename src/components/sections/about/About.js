@@ -11,6 +11,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
 const styles = (theme) => ({
+  ...theme.globalStyles,
   sectionContainer: {
     overflow: "hidden",
   },
@@ -48,7 +49,7 @@ function About(props) {
   const { classes } = props;
 
   const aboutMarkup = (
-    <Typography variant="body1">
+    <Typography variant="body1" className={classes.textShadowWhite}>
       I'm a graduate from the Management Science program at{" "}
       <MyHoverLink href="https://ucsd.edu/">UCSD</MyHoverLink>, a quantitative
       major in applied economics. During my time there, I used a program called
@@ -68,7 +69,9 @@ function About(props) {
   return (
     <div className={`section-container ${classes.sectionContainer}`}>
       <div className="content-container">
-        <Typography variant="h4">About Me</Typography>
+        <Typography variant="h4" className={classes.textShadowWhite}>
+          About Me
+        </Typography>
         <hr />
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
@@ -119,6 +122,7 @@ function About(props) {
                     textAlign: "center",
                     margin: "0 auto 0 auto",
                   }}
+                  className={classes.textShadowWhite}
                 >
                   I build responsive websites that work for all device sizes!
                 </Typography>

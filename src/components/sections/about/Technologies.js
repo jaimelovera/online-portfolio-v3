@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import GridTechLogoItem from "./GridTechLogoItem";
 
 // Material-UI Stuff
@@ -22,10 +22,24 @@ import ReduxSvg from "../../../img/technologies/redux.svg";
 import CSS3Svg from "../../../img/technologies/css3.svg";
 
 function Technologies() {
+  const typeHeadingStyles = { paddingTop: 12 };
+  const containerStyles = {
+    backgroundColor: "#FFF",
+    border: "1px solid #000",
+    borderRadius: 5,
+    padding: 18,
+  };
+
   return (
-    <Fragment>
-      <Typography variant="h6">Worked with the most:</Typography>
-      <Grid container spacing={1}>
+    <div style={containerStyles}>
+      <Grid container justify="center">
+        <Typography variant="h5">Technologies</Typography>
+      </Grid>
+      <hr />
+      <Typography variant="h6" style={typeHeadingStyles}>
+        Most Used:
+      </Typography>
+      <Grid container spacing={2}>
         <GridTechLogoItem src={ReactSvg} alt="React Logo" />
         <GridTechLogoItem src={JavaScriptSvg} alt="JavaScript Logo" />
         <GridTechLogoItem src={HTML5Svg} alt="HTML5 Logo" />
@@ -33,8 +47,10 @@ function Technologies() {
         <GridTechLogoItem src={PythonSvg} alt="Python Logo" />
         <GridTechLogoItem src={MySQLSvg} alt="MySQL Logo" />
       </Grid>
-      <Typography variant="h6">Working with recently:</Typography>
-      <Grid container spacing={1}>
+      <Typography variant="h6" style={typeHeadingStyles}>
+        Recently Used:
+      </Typography>
+      <Grid container spacing={2}>
         <GridTechLogoItem src={MaterialUISvg} alt="Material-UI Logo" />
         <GridTechLogoItem src={FirebaseSvg} alt="Firebase Logo" />
         <GridTechLogoItem src={MongoDBSvg} alt="MongoDB Logo" />
@@ -42,12 +58,14 @@ function Technologies() {
         <GridTechLogoItem src={ExpressSvg} alt="Express Logo" />
         <GridTechLogoItem src={ReduxSvg} alt="Redux Logo" />
       </Grid>
-      <Typography variant="h6">Used in the past:</Typography>
-      <Grid container spacing={1}>
+      <Typography variant="h6" style={typeHeadingStyles}>
+        Previously Used:
+      </Typography>
+      <Grid container spacing={2}>
         <GridTechLogoItem src={BootStrapSvg} alt="Bootstrap Logo" />
         <GridTechLogoItem src={DjangoSvg} alt="Django Logo" />
       </Grid>
-    </Fragment>
+    </div>
   );
 }
 export default Technologies;

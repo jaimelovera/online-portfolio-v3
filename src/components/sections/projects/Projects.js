@@ -20,6 +20,7 @@ import twitterCloneImg from "../../../img/projects/twitter-clone/twitter-clone.p
 import twitterCloneGif from "../../../img/projects/twitter-clone/twitter-clone.gif";
 
 const styles = (theme) => ({
+  ...theme.globalStyles,
   sectionContainer: {},
   projectsTitle: {
     margin: "0 0 20px 0",
@@ -34,7 +35,9 @@ function Projects(props) {
       <div className="content-container">
         <Grid container direction="column" alignItems="stretch">
           <Grid item className={classes.projectsTitle}>
-            <Typography variant="h4">Projects</Typography>
+            <Typography variant="h4" className={classes.textShadowWhite}>
+              Projects
+            </Typography>
             <hr />
           </Grid>
         </Grid>

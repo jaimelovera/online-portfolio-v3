@@ -52,5 +52,12 @@ export default {
       fontWeight: 700,
     },
   },
-  globalStyles: {},
+  globalStyles: {
+    textShadowPrimary: {
+      textShadow: "#90a4ae 1px 0 10px",
+    },
+    textShadowWhite: {
+      textShadow: "#FFF 1px 0 10px",
+    },
+  },
 };

@@ -40,7 +40,7 @@ const styles = (theme) => ({
   },
   shortInfoAnimate: {
     animation: "slideFromX 3s forwards",
-    animationDelay: "3s",
+    animationDelay: "2.75s",
   },
   longInfo: {
     maxWidth: 500,
@@ -50,7 +50,7 @@ const styles = (theme) => ({
   },
   longInfoAnimate: {
     animation: "slideFromX 1.5s forwards",
-    animationDelay: "4.5s",
+    animationDelay: "4.25s",
   },
 });
 

@@ -27,3 +27,31 @@ a {
   margin: 0 auto;
   max-width: 1000px;
 }
+
+.app-animate-on-load {
+  opacity: 0;
+  animation: fade 1s ease-in forwards;
+  animation-delay: 0.25s;
+}
+
+.app-page-loading {
+  opacity: 0;
+}
+
+@keyframes fade {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromTop {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromLeft {
+  100% {
+    transform: translateX(0);
+  }
+}

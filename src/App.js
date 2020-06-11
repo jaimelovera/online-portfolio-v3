@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import themeFile from "./util/theme";
 import "./App.css";
 
@@ -21,42 +21,56 @@ import {
 let theme = createMuiTheme(themeFile);
 theme = responsiveFontSizes(theme);
 
-function App() {
-  const projectGitHubLink =
-    "https://github.com/jaimelovera/online-portfolio-v3";
-  const email = "lovera.jaime@gmail.com";
-  const gitHubLink = "https://github.com/jaimelovera";
-  const linkedInLink = "https://www.linkedin.com/in/jaimelovera/";
+class App extends Component {
+  state = {
+    pageLoaded: false,
+  };
 
-  return (
-    <ThemeProvider theme={theme}>
-      <Navbar />
-      <SideContactBar
-        gitHubLink={gitHubLink}
-        linkedInLink={linkedInLink}
-        email={email}
-      />
-      <div id="intro">
-        <Intro />
-      </div>
-      <div id="about">
-        <About />
-      </div>
-      <div id="projects">
-        <Projects />
-      </div>
-      <div id="contact">
-        <Contact email={email} />
-      </div>
-      <div id="footer">
+  componentDidMount() {
+    window.addEventListener("load", () => this.setState({ pageLoaded: true }));
+  }
+
+  render() {
+    const { pageLoaded } = this.state;
+
+    const projectGitHubLink =
+      "https://github.com/jaimelovera/online-portfolio-v3";
+    const email = "lovera.jaime@gmail.com";
+    const gitHubLink = "https://github.com/jaimelovera";
+    const linkedInLink = "https://www.linkedin.com/in/jaimelovera/";
+
+    return (
+      <ThemeProvider theme={theme}>
+        <Navbar />
+        <SideContactBar
+          gitHubLink={gitHubLink}
+          linkedInLink={linkedInLink}
+          email={email}
+        />
+        <div
+          className={pageLoaded ? "app-animate-on-load" : "app-page-loading"}
+        >
+          <div id="intro">
+            <Intro pageLoaded={pageLoaded} />
+          </div>
+          <div id="about">
+            <About />
+          </div>
+          <div id="projects">
+            <Projects />
+          </div>
+          <div id="contact">
+            <Contact email={email} />
+          </div>
+        </div>
         <Footer
           projectGitHubLink={projectGitHubLink}
           gitHubLink={gitHubLink}
           linkedInLink={linkedInLink}
         />
-      </div>
-    </ThemeProvider>
-  );
+      </ThemeProvider>
+    );
+  }
 }
 
 export default App;

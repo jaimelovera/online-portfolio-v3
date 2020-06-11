@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import laptopDeskImg from "../../../img/desk-laptop-bg.jpg";
 import laptopDeskMobileImg from "../../../img/desk-laptop-bg-mobile.jpg";
 
@@ -29,61 +29,97 @@ const styles = (theme) => ({
   },
   jaimeLovera: {
     fontWeight: 800,
+    position: "relative",
+    transform: "translateY(calc(-100vh - 100px))",
   },
-  shortInfo: {},
+  jaimeLoveraAnimate: {
+    animation: "slideFromTop 1.25s forwards",
+    animationDelay: "1s",
+  },
+  shortInfo: {
+    position: "relative",
+    transform: "translateY(calc(-100vh - 100px))",
+  },
+  shortInfoAnimate: {
+    animation: "slideFromTop 0.75s forwards",
+    animationDelay: "3s",
+  },
   longInfo: {
     maxWidth: 500,
     padding: "20px 0 160px 0",
+    position: "relative",
+    transform: "translateX(calc(-100vw - 500px))",
+  },
+  longInfoAnimate: {
+    animation: "slideFromLeft 1s forwards",
+    animationDelay: "4.5s",
   },
 });
 
-function Intro(props) {
-  const { classes } = props;
+class Intro extends Component {
+  shouldComponentUpdate(nextProps) {
+    if (nextProps.pageLoaded === true) {
+      return true;
+    }
+  }
 
-  return (
-    <div className={`section-container ${classes.sectionContainer}`}>
-      <div className={`section-container ${classes.sectionContainerTopLayer}`}>
-        <div className="content-container">
-          <Grid
-            container
-            direction="column"
-            justify="center"
-            alignItems="flex-start"
-          >
-            <Grid item>
-              <Typography
-                variant="body1"
-                className={`${classes.myNameIs} ${classes.textShadowPrimary}`}
-              >
-                Hi, my name is
-              </Typography>
-              <Typography
-                variant="h1"
-                className={`${classes.jaimeLovera} ${classes.textShadowPrimary}`}
-              >
-                Jaime Lovera.
-              </Typography>
-              <Typography
-                variant="h2"
-                className={`${classes.shortInfo} ${classes.textShadowPrimary}`}
-              >
-                I build things for the web.
-              </Typography>
-              <Typography
-                variant="body1"
-                className={`${classes.longInfo} ${classes.textShadowPrimary}`}
-              >
-                I'm an aspiring software developer based in San Diego, CA
-                specializing in building exceptional websites and applications.
-                I also happen to be data literate, working alongside software
-                developers as a data analyst building data-driven products.
-              </Typography>
+  render() {
+    const { classes, pageLoaded } = this.props;
+
+    return (
+      <div className={`section-container ${classes.sectionContainer}`}>
+        <div
+          className={`section-container ${classes.sectionContainerTopLayer}`}
+        >
+          <div className="content-container">
+            <Grid
+              container
+              direction="column"
+              justify="center"
+              alignItems="flex-start"
+            >
+              <Grid item>
+                <Typography
+                  variant="body1"
+                  className={`${classes.myNameIs} ${classes.textShadowPrimary}`}
+                >
+                  Hi, my name is
+                </Typography>
+                <Typography
+                  variant="h1"
+                  className={`${classes.jaimeLovera} ${
+                    classes.textShadowPrimary
+                  } ${pageLoaded && classes.jaimeLoveraAnimate}`}
+                >
+                  Jaime Lovera.
+                </Typography>
+                <Typography
+                  variant="h2"
+                  className={`${classes.shortInfo} ${
+                    classes.textShadowPrimary
+                  } ${pageLoaded && classes.shortInfoAnimate}`}
+                >
+                  I build things for the web.
+                </Typography>
+                <Typography
+                  variant="body1"
+                  className={`${classes.longInfo} ${
+                    classes.textShadowPrimary
+                  } ${pageLoaded && classes.longInfoAnimate}`}
+                >
+                  I'm an aspiring software developer based in San Diego, CA
+                  specializing in building exceptional websites and
+                  applications. I also happen to be data literate, working
+                  alongside software developers as a data analyst building
+                  data-driven products.
+                </Typography>
+              </Grid>
             </Grid>
-          </Grid>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default withStyles(styles)(Intro);

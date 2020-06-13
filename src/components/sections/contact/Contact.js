@@ -49,7 +49,7 @@ function Contact(props) {
             </Grid>
             <Grid item>
               <Typography
-                variant="body1"
+                variant="body2"
                 className={`${classes.contactBody} ${classes.textShadowWhite}`}
               >
                 Whether you have a question or just want to say hi, my inbox is
@@ -58,10 +58,7 @@ function Contact(props) {
               </Typography>
             </Grid>
             <Grid item>
-              <Typography
-                variant="subtitle1"
-                className={classes.textShadowWhite}
-              >
+              <Typography variant="body1" className={classes.textShadowWhite}>
                 {email}
               </Typography>
             </Grid>
@@ -72,7 +69,7 @@ function Contact(props) {
                 href={`mailto:${email}`}
                 className={classes.contactButton}
               >
-                <Typography variant="subtitle1">Say Hello!</Typography>
+                <Typography variant="body1">Say Hello!</Typography>
               </Button>
             </Grid>
           </Grid>

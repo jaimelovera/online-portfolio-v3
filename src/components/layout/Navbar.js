@@ -1,8 +1,8 @@
 import React from "react";
-import logoImg from "../../../img/name-logo.png";
-import resume from "../../../pdf/jaimelovera-resume.pdf";
-import HideOnScroll from "../../../util/HideOnScroll";
-import MyHoverLink from "../../../util/MyHoverLink";
+import logoImg from "../../img/name-logo.png";
+import resume from "../../pdf/jaimelovera-resume.pdf";
+import HideOnScroll from "../../util/HideOnScroll";
+import MyHoverLink from "../../util/MyHoverLink";
 
 // Material-UI stuff
 import { withStyles } from "@material-ui/core/styles";

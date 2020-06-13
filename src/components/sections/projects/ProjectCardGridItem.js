@@ -40,9 +40,9 @@ const styles = (theme) => ({
 function ProjectCard(props) {
   const {
     classes,
+    children,
     image,
     title,
-    body,
     technologies,
     visitLink,
     gitHubLink,
@@ -77,8 +77,13 @@ function ProjectCard(props) {
           <Typography gutterBottom variant="h5" style={{ paddingTop: 14 }}>
             {title}
           </Typography>
-          <Typography gutterBottom variant="body2" color="secondary">
-            {body}
+          <Typography
+            gutterBottom
+            variant="body1"
+            color="secondary"
+            style={{ textAlign: "left" }}
+          >
+            {children}
           </Typography>
         </CardContent>
         <CardContent
@@ -109,7 +114,6 @@ function ProjectCard(props) {
 ProjectCard.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired,
   technologies: PropTypes.string.isRequired,
   visitLink: PropTypes.string.isRequired,
   gitHubLink: PropTypes.string.isRequired,

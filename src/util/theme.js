@@ -1,11 +1,11 @@
 import blueGrey from "@material-ui/core/colors/blueGrey";
 
-const primary = blueGrey[300];
+const primaryMain = blueGrey[300];
 
 export default {
   palette: {
     primary: {
-      main: primary,
+      main: primaryMain,
     },
     secondary: {
       main: "#000",
@@ -16,11 +16,11 @@ export default {
       textTransform: "none",
     },
     body1: {
-      fontSize: "1.1rem",
+      fontSize: "1rem",
       fontFamily: '"Nunito", sans-serif',
     },
     body2: {
-      fontSize: "1rem",
+      fontSize: "1.135rem",
       fontFamily: '"Nunito", sans-serif',
     },
     subtitle1: {

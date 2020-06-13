@@ -1,7 +1,7 @@
 import React from "react";
 import Technologies from "./Technologies";
-
 import MyHoverLink from "../../../util/MyHoverLink";
+
 import ProfileImg from "../../../img/profile-photo.jpg";
 import WebDevImg from "../../../img/web-development.png";
 
@@ -48,23 +48,50 @@ const styles = (theme) => ({
 function About(props) {
   const { classes } = props;
 
-  const aboutMarkup = (
-    <Typography variant="body1" className={classes.textShadowWhite}>
-      I'm a graduate from the Management Science program at{" "}
-      <MyHoverLink href="https://ucsd.edu/">UCSD</MyHoverLink>, a quantitative
-      major in applied economics. During my time there, I used a program called
-      MatLab to solve constraint problems. This was my introduction to 'for
-      loops' and the ability to systematically program a computer to make
-      decisions. I was fascinated. I began adding computer science courses to my
-      curriculum. I studied topics ranging from data structures all the way to
-      lower level programming with Assembly. Since graduating, I have worked as
-      a data analyst, collaborating with a team of software developers to help
-      build data driven products. In addition to the experience I have gained in
-      my professional role, I have continued my education through a self-taught
-      curriculum. I'm passionate about building for the web and excited for the
-      future of web development!
-    </Typography>
-  );
+  const aboutMarkup = () => {
+    const udemy = (
+      <MyHoverLink href="https://www.udemy.com/">Udemy</MyHoverLink>
+    );
+    const freeCodeCamp = (
+      <MyHoverLink href="https://www.freecodecamp.org/">
+        freeCodeCamp
+      </MyHoverLink>
+    );
+    const ucsd = <MyHoverLink href="https://ucsd.edu/">UCSD</MyHoverLink>;
+    const linkedin = (
+      <MyHoverLink href={props.linkedInLink}>LinkedIn</MyHoverLink>
+    );
+
+    return (
+      <Typography variant="body1" className={classes.textShadowWhite}>
+        <p>
+          I'm a graduate from the Management Science program at {ucsd}, a
+          quantitative major in applied economics. During my time there, I used
+          a program called MatLab to solve constraint problems. This was my
+          introduction to 'for loops' and the ability to systematically program
+          a computer to make decisions. I was fascinated. I began adding
+          computer science courses to my curriculum. I studied topics ranging
+          from data structures to lower level programming with Assembly.
+        </p>
+        <p>
+          Since graduating, I have worked as a data analyst, collaborating with
+          a team of software developers to help build data driven products.
+          Visit my {linkedin} profile to see what my current, and previous
+          managers have to say about me!
+        </p>
+        <p>
+          In addition to the experience I have gained in my professional role, I
+          have continued my education through a self-taught curriculum
+          leveraging resources such as {udemy}, {freeCodeCamp}, and many other
+          resources.
+        </p>
+        <p>
+          I'm passionate about building for the web and excited for the future
+          of web development!
+        </p>
+      </Typography>
+    );
+  };
 
   return (
     <div className={`section-container ${classes.sectionContainer}`}>
@@ -74,12 +101,12 @@ function About(props) {
         </Typography>
         <hr />
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={7}>
             <Grid container>
-              <Grid item>{aboutMarkup}</Grid>
+              <Grid item>{aboutMarkup()}</Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={5}>
             <Grid container justify="center" alignItems="center">
               <Grid item>
                 <div style={{ position: "relative" }}>
@@ -116,7 +143,7 @@ function About(props) {
                   className={classes.webDevImg}
                 />
                 <Typography
-                  variant="subtitle1"
+                  variant="body2"
                   style={{
                     maxWidth: "80%",
                     textAlign: "center",

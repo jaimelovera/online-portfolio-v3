@@ -3,7 +3,7 @@ import themeFile from "./util/theme";
 import "./App.css";
 
 // Components
-import Navbar from "./components/layout/NavBar/Navbar";
+import Navbar from "./components/layout/Navbar";
 import SideContactBar from "./components/layout/SideContactBar";
 import PageLoadingSpinner from "./util/PageLoadingSpinner";
 import Intro from "./components/sections/intro/Intro";
@@ -56,7 +56,7 @@ class App extends Component {
             <Intro pageLoaded={pageLoaded} />
           </div>
           <div id="about">
-            <About />
+            <About linkedInLink={linkedInLink} />
           </div>
           <div id="projects">
             <Projects />

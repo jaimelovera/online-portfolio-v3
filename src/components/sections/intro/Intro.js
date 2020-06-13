@@ -78,7 +78,7 @@ class Intro extends Component {
             >
               <Grid item>
                 <Typography
-                  variant="body1"
+                  variant="body2"
                   className={`${classes.myNameIs} ${classes.textShadowPrimary}`}
                 >
                   Hi, my name is
@@ -100,14 +100,16 @@ class Intro extends Component {
                   I build things for the web.
                 </Typography>
                 <Typography
-                  variant="body1"
+                  variant="body2"
                   className={`${classes.longInfo} ${
                     classes.textShadowPrimary
                   } ${pageLoaded && classes.longInfoAnimate}`}
                 >
                   I'm an aspiring software developer based in San Diego, CA
-                  specializing in building exceptional websites, applications,
-                  and anything else that lives on the web.
+                  specializing in building exceptional websites and
+                  applications. I'm currently a data analyst working with
+                  various modern technologies to help build data-driven
+                  products.
                 </Typography>
               </Grid>
             </Grid>

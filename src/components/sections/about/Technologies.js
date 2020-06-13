@@ -10,11 +10,8 @@ import JavaScriptSvg from "../../../img/technologies/javascript.svg";
 import BootStrapSvg from "../../../img/technologies/bootstrap.svg";
 import MaterialUISvg from "../../../img/technologies/material-ui.svg";
 import FirebaseSvg from "../../../img/technologies/firebase.svg";
-import MongoDBSvg from "../../../img/technologies/mongodb.svg";
-import ExpressSvg from "../../../img/technologies/express.svg";
 import DjangoSvg from "../../../img/technologies/django.svg";
 import PythonSvg from "../../../img/technologies/python.svg";
-import NodeJSSvg from "../../../img/technologies/nodejs.svg";
 import ReactSvg from "../../../img/technologies/react.svg";
 import MySQLSvg from "../../../img/technologies/mysql.svg";
 import HTML5Svg from "../../../img/technologies/html5.svg";
@@ -22,12 +19,12 @@ import ReduxSvg from "../../../img/technologies/redux.svg";
 import CSS3Svg from "../../../img/technologies/css3.svg";
 
 function Technologies() {
-  const typeHeadingStyles = { paddingTop: 12 };
+  const typeHeadingStyles = { paddingTop: 6 };
   const containerStyles = {
     backgroundColor: "#FFF",
     border: "1px solid #000",
     borderRadius: 5,
-    padding: 18,
+    padding: "12px 25px",
   };
 
   return (
@@ -53,9 +50,6 @@ function Technologies() {
       <Grid container spacing={2}>
         <GridTechLogoItem src={MaterialUISvg} alt="Material-UI Logo" />
         <GridTechLogoItem src={FirebaseSvg} alt="Firebase Logo" />
-        <GridTechLogoItem src={MongoDBSvg} alt="MongoDB Logo" />
-        <GridTechLogoItem src={NodeJSSvg} alt="NodeJS Logo" />
-        <GridTechLogoItem src={ExpressSvg} alt="Express Logo" />
         <GridTechLogoItem src={ReduxSvg} alt="Redux Logo" />
       </Grid>
       <Typography variant="h6" style={typeHeadingStyles}>

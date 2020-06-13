@@ -66,8 +66,20 @@ function Projects(props) {
             gitHubLink="https://github.com/jaimelovera/online-portfolio-v3"
             visitLink="https://www.jaimelovera.com/"
           >
-            A place to learn more about the portfolio owner<i>(me)</i> and to
-            see projects that the individual has been working on.
+            <p>
+              A place to learn more about the portfolio owner<i>(me)</i> and to
+              see projects that the individual has been working on.
+            </p>
+            <p>
+              Previous Iterations:{" "}
+              <MyHoverLink href="https://jaimelovera.github.io/online-portfolio-v1/index.html">
+                v1
+              </MyHoverLink>
+              ,{" "}
+              <MyHoverLink href="https://jaimelovera.github.io/online-portfolio-v2/">
+                v2
+              </MyHoverLink>
+            </p>
           </ProjectCardGridItem>
           <ProjectCardGridItem
             image={musicLyricFinderImg}

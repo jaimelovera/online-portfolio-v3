@@ -28,7 +28,7 @@ const styles = (theme) => ({
   jaimeLovera: {
     fontWeight: 800,
     position: "relative",
-    transform: "translateY(calc(-100vh - 100px))",
+    transform: "translateY(-100vh)",
   },
   jaimeLoveraAnimate: {
     animation: "slideFromY 1.75s forwards",
@@ -36,7 +36,7 @@ const styles = (theme) => ({
   },
   shortInfo: {
     position: "relative",
-    transform: "translateX(calc(-100vw))",
+    transform: "translateX(-100vw)",
   },
   shortInfoAnimate: {
     animation: "slideFromX 1.5s forwards",
@@ -46,7 +46,7 @@ const styles = (theme) => ({
     maxWidth: 500,
     padding: "20px 0 140px 0",
     position: "relative",
-    transform: "translateX(calc(-100vw))",
+    transform: "translateX(-100vw)",
   },
   longInfoAnimate: {
     animation: "slideFromX 2.5s forwards",

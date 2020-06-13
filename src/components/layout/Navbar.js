@@ -26,7 +26,7 @@ const styles = (theme) => ({
     margin: "0 20px 0 20px",
   },
   logoImg: {
-    height: 56,
+    height: 50,
     width: "auto",
     MozTransition: "all 0.2s ease-in",
     OTransition: "all 0.2s ease-in",

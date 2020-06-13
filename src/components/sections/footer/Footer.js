@@ -26,7 +26,7 @@ const styles = (theme) => ({
   },
   footerLinkIcon: {
     fontSize: "2em",
-    margin: "40px 12px 12px 12px",
+    margin: "40px 12px 40px 12px",
     position: "relative",
     transition: "top linear 0.2s",
     "&:hover": {
@@ -34,7 +34,7 @@ const styles = (theme) => ({
     },
   },
   logoImg: {
-    padding: 20,
+    padding: 15,
     height: 45,
     width: "auto",
     MozTransition: "all 0.2s ease-in",
@@ -71,12 +71,13 @@ function Footer(props) {
             </Grid>
           </Hidden>
           <Grid item xs={12}>
-            <Grid container justify="center" alignItems="center" spacing={1}>
-              <Grid item>
-                <a href="/">
-                  <img src={logoImg} alt="Logo" className={classes.logoImg} />
-                </a>
-              </Grid>
+            <Grid
+              container
+              direction="row-reverse"
+              justify="center"
+              alignItems="center"
+              spacing={1}
+            >
               <Grid item>
                 <MyHoverLink
                   href={projectGitHubLink}
@@ -85,6 +86,11 @@ function Footer(props) {
                 >
                   Designed & Built by Jaime Lovera
                 </MyHoverLink>
+              </Grid>
+              <Grid item>
+                <a href="/">
+                  <img src={logoImg} alt="Logo" className={classes.logoImg} />
+                </a>
               </Grid>
             </Grid>
           </Grid>

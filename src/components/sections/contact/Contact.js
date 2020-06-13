@@ -11,7 +11,7 @@ const styles = (theme) => ({
   ...theme.globalStyles,
   sectionContainer: {},
   contactContainer: {
-    padding: "140px 0",
+    padding: "160px 0",
     margin: "0 auto",
     maxWidth: 600,
   },

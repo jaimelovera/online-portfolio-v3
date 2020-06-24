@@ -11,7 +11,6 @@ const styles = (theme) => ({
     height: "auto",
     maxWidth: 38,
     maxHeight: 38,
-    padding: "5px 0 5px 0",
     MozTransition: "all 0.2s linear",
     OTransition: "all 0.2s linear",
     WebkitTransition: "all 0.2s linear",

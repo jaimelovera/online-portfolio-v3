@@ -20,6 +20,7 @@ import LaunchIcon from "@material-ui/icons/Launch";
 
 const styles = (theme) => ({
   card: {
+    backgroundColor: "#eceff1",
     height: "100%",
     display: "flex",
     flexDirection: "column",

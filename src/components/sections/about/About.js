@@ -66,28 +66,31 @@ function About(props) {
       <Typography variant="body1" className={classes.textShadowWhite}>
         <p>
           I'm a graduate from the Management Science program at {ucsd}, a
-          quantitative major in applied economics. During my time there, I used
-          a program called MatLab to solve constraint problems. This was my
+          quantitative major in applied economics with a strong focus on
+          statistical analysis and mathematics. During my time there, I used a
+          program called MatLab to solve constraint problems. This was my
           introduction to 'for loops' and the ability to systematically program
           a computer to make decisions. I was fascinated. I began adding
           computer science courses to my curriculum. I studied topics ranging
           from data structures to lower level programming with Assembly.
         </p>
         <p>
-          Since graduating, I have worked as a data analyst, collaborating with
-          a team of software developers to help build data driven products.
-          Visit my {linkedin} profile to see what my current, and previous
-          managers have to say about me!
+          Since graduating, I have held multiple roles as a data analyst,
+          helping build data driven products. Visit my {linkedin} profile to see
+          what my peers have to say about me!
         </p>
         <p>
-          In addition to the experience I have gained in my professional role, I
-          have continued my education through a self-taught curriculum
-          leveraging resources such as {udemy}, {freeCodeCamp}, and many other
-          resources.
+          In addition to the experience I have gained in my professional roles,
+          I have continued my education by building interesting projects, and
+          through a self-taught curriculum leveraging resources such as {udemy},{" "}
+          {freeCodeCamp}, and many others.
         </p>
         <p>
-          I'm passionate about building for the web and excited for the future
-          of web development!
+          I'm passionate about web applications, but more specifically, I'm
+          passionate about helping build the complex data infrastructures that
+          power today's modern web applications. The rapid advances in
+          technology makes this a field that requires constant learning, which
+          is something that I look forward to!
         </p>
       </Typography>
     );

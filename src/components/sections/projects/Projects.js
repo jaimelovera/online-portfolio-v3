@@ -37,7 +37,7 @@ function Projects(props) {
             <hr />
           </Grid>
         </Grid>
-        <Grid container alignItems="stretch" spacing={3}>
+        <Grid container alignItems="stretch" spacing={4}>
           <ProjectCardGridItem
             image={twitterCloneImg}
             title="Twitter Clone"

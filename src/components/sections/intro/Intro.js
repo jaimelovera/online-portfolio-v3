@@ -32,7 +32,7 @@ const styles = (theme) => ({
   },
   jaimeLoveraAnimate: {
     animation: "slideFromY 1.75s forwards",
-    animationDelay: "0.75s",
+    animationDelay: "0.6s",
   },
   shortInfo: {
     position: "relative",
@@ -40,7 +40,7 @@ const styles = (theme) => ({
   },
   shortInfoAnimate: {
     animation: "slideFromX 1.5s forwards",
-    animationDelay: "3s",
+    animationDelay: "2.5s",
   },
   longInfo: {
     maxWidth: 500,
@@ -50,7 +50,7 @@ const styles = (theme) => ({
   },
   longInfoAnimate: {
     animation: "slideFromX 2.5s forwards",
-    animationDelay: "3s",
+    animationDelay: "2.5s",
   },
 });
 
@@ -97,7 +97,7 @@ class Intro extends Component {
                     classes.textShadowPrimary
                   } ${pageLoaded && classes.shortInfoAnimate}`}
                 >
-                  I build things for the web.
+                  Welcome to my website!
                 </Typography>
                 <Typography
                   variant="body2"
@@ -105,11 +105,8 @@ class Intro extends Component {
                     classes.textShadowPrimary
                   } ${pageLoaded && classes.longInfoAnimate}`}
                 >
-                  I'm an aspiring software developer based in San Diego, CA
-                  specializing in building exceptional websites and
-                  applications. I'm currently a data analyst working with
-                  various modern technologies to help build data-driven
-                  products.
+                  I'm a data analyst based in San Diego, CA specializing in
+                  developing elegant and impactful solutions to data problems.
                 </Typography>
               </Grid>
             </Grid>

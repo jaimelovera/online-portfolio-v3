@@ -75,7 +75,7 @@ function About(props) {
           from data structures to lower level programming with Assembly.
         </p>
         <p>
-          Since graduating, I have held multiple roles as a data analyst,
+          Since graduating, I have held multiple roles as a Data Analyst and a Data Engineer 
           helping build data driven products. Visit my {linkedin} profile to see
           what my peers have to say about me!
         </p>

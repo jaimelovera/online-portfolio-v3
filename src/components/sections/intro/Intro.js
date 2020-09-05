@@ -105,7 +105,7 @@ class Intro extends Component {
                     classes.textShadowPrimary
                   } ${pageLoaded && classes.longInfoAnimate}`}
                 >
-                  I'm a data analyst based in San Diego, CA specializing in
+                  I'm a Data Engineer based in San Diego, CA specializing in
                   developing elegant and impactful solutions to data problems.
                 </Typography>
               </Grid>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import themeFile from "./util/theme";
+import ThemeConfiguration from "./util/theme";
 import "./App.css";
 
 // Components
@@ -19,7 +19,7 @@ import {
   ThemeProvider,
 } from "@material-ui/core/styles";
 
-let theme = createMuiTheme(themeFile);
+let theme = createMuiTheme(ThemeConfiguration);
 theme = responsiveFontSizes(theme);
 
 class App extends Component {

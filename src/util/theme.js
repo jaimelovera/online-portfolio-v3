@@ -2,7 +2,7 @@ import blueGrey from "@material-ui/core/colors/blueGrey";
 
 const primaryMain = blueGrey[300];
 
-export default {
+let ThemeConfiguration = {
   palette: {
     primary: {
       main: primaryMain,
@@ -61,3 +61,5 @@ export default {
     },
   },
 };
+
+export default ThemeConfiguration;

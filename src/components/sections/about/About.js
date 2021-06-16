@@ -49,14 +49,6 @@ function About(props) {
   const { classes } = props;
 
   const aboutMarkup = () => {
-    const udemy = (
-      <MyHoverLink href="https://www.udemy.com/">Udemy</MyHoverLink>
-    );
-    const freeCodeCamp = (
-      <MyHoverLink href="https://www.freecodecamp.org/">
-        freeCodeCamp
-      </MyHoverLink>
-    );
     const ucsd = <MyHoverLink href="https://ucsd.edu/">UCSD</MyHoverLink>;
     const linkedin = (
       <MyHoverLink href={props.linkedInLink}>LinkedIn</MyHoverLink>
@@ -65,31 +57,16 @@ function About(props) {
     return (
       <Typography variant="body1" className={classes.textShadowWhite}>
         <p>
-          I'm a graduate from the Management Science program at {ucsd}, a
-          quantitative major in applied economics with a strong focus on
-          statistical analysis and mathematics. During my time there, I used a
-          program called MatLab to solve constraint problems. This was my
-          introduction to 'for loops' and the ability to systematically program
-          a computer to make decisions. I was fascinated. I began adding
-          computer science courses to my curriculum. I studied topics ranging
-          from data structures to lower level programming with Assembly.
+          I'm a graduate from the Management Science program at {ucsd}, a quantitative major in applied economics with a strong focus on statistical analysis and mathematics. During my time there, I used MatLab to solve constraint problems. This was my introduction to 'for loops' and the ability to systematically program a computer to make decisions. I was fascinated. I began adding computer science courses to my curriculum. I studied topics ranging from object oriented programming to lower level programming with Assembly.
         </p>
         <p>
-          Since graduating, I have held multiple roles helping build data driven products. Visit my {linkedin} profile to see
-          what my peers have to say about me!
+          Since graduating, I have held multiple roles helping build data driven products. Visit my {linkedin} profile to see what my peers have to say about me!
         </p>
         <p>
-          In addition to the experience I have gained in my professional roles,
-          I have continued my education by building interesting projects, and
-          through a self-taught curriculum leveraging resources such as {udemy},{" "}
-          {freeCodeCamp}, and many others.
+          In addition to the experience I have gained in my professional roles, I have continued my education by building interesting projects and by leveraging resources such as Udemy, Youtube, and many others.
         </p>
         <p>
-          I'm passionate about web applications, but more specifically, I'm
-          passionate about helping build the complex data infrastructures that
-          power today's modern web applications. The rapid advances in
-          technology makes this a field that requires constant learning, which
-          is something that I look forward to!
+          I'm passionate about web applications, but more specifically, I'm passionate about helping build the complex data infrastructures that power today's modern web applications. The rapid advances in technology makes this a field that requires constant learning, which is something that I look forward to doing!
         </p>
       </Typography>
     );

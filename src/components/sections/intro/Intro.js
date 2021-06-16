@@ -31,8 +31,8 @@ const styles = (theme) => ({
     transform: "translateY(-100vh)",
   },
   jaimeLoveraAnimate: {
-    animation: "slideFromY 1.75s forwards",
-    animationDelay: "0.6s",
+    animation: "slideFromY 1.25s forwards",
+    animationDelay: "0.25s",
   },
   shortInfo: {
     position: "relative",
@@ -40,7 +40,7 @@ const styles = (theme) => ({
   },
   shortInfoAnimate: {
     animation: "slideFromX 1.5s forwards",
-    animationDelay: "2.5s",
+    animationDelay: "1.25s",
   },
   longInfo: {
     maxWidth: 500,
@@ -49,8 +49,8 @@ const styles = (theme) => ({
     transform: "translateX(-100vw)",
   },
   longInfoAnimate: {
-    animation: "slideFromX 2.5s forwards",
-    animationDelay: "2.5s",
+    animation: "slideFromX 2s forwards",
+    animationDelay: "1.25s",
   },
 });
 

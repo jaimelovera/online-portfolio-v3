@@ -8,13 +8,13 @@ https://www.jaimelovera.com/
 
 ## Quick Start
 
-1. Setup docker container environment:
+1. Setup docker container environment using docker commands and Dockerfile. Or use my handy scripts:
 	```
-	docker build -t online-portfolio-v3 .
+	./docker_scripts/build.sh
 	
-	./scripts/docker_run.sh
+	./docker_scripts/run.sh
 	
-	docker exec -it online-portfolio-v3 bash
+	./docker_scripts/exec.sh
 	```
 
 2. Install dependencies

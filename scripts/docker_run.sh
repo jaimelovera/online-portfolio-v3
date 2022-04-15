@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# NOTE: Script expects a image tagged with the project name.
+
 HOST_PROJECT_DIR=$(dirname $(dirname $(readlink -f $0)))
 PROJECT_NAME=$(basename ${HOST_PROJECT_DIR})
 

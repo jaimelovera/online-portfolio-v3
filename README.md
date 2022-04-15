@@ -8,13 +8,12 @@ https://www.jaimelovera.com/
 
 ## Quick Start
 
-1. This was built using the following npm and node versions:
+1. Setup docker container environment:
 	```
-	$ npm --version
-	8.5.0
-
-	$ node --version
-	v14.19.0
+	cd online-portfolio-v3/Docker
+	docker build -t online-portfolio-v3 .
+	./run.sh
+	docker exec -it online-portfolio-v3 bash
 	```
 
 2. Install dependencies
@@ -22,14 +21,9 @@ https://www.jaimelovera.com/
 	npm install
 	```
 
-3. Serve on localhost:3000
+3. Start server
 	```
 	npm start
-	```
-
-4. Build for production
-	```
-	npm run build
 	```
 
 ## Motivation

@@ -10,11 +10,9 @@ https://www.jaimelovera.com/
 
 1. Setup docker container environment:
 	```
-	cd online-portfolio-v3/Docker
-	
 	docker build -t online-portfolio-v3 .
 	
-	./run.sh
+	./scripts/docker_run.sh
 	
 	docker exec -it online-portfolio-v3 bash
 	```

@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# NOTE: Script expects a image tagged with the project name.
-
 HOST_PROJECT_DIR=$(dirname $(dirname $(readlink -f $0)))
 PROJECT_NAME=$(basename ${HOST_PROJECT_DIR})
 
-echo "Running container..."
+echo "Stopping container if exists..."
+docker container stop ${PROJECT_NAME}
+
+printf "\nRunning container...\n"
 docker run -d --rm --pull=never \
 --name ${PROJECT_NAME} \
 --hostname container \

@@ -9,8 +9,8 @@ https://www.jaimelovera.com/
 ## Quick Start
 
 1. (Optional) Setup environment using docker:
-	Open Dockerfile and edit  USER, USER_UID, USER_GID to match your host user.
-	Build the docker image, run a conainer, and start a shell session inside the container using the following commands:
+	Open Dockerfile and edit  USER, USER_UID, USER_GID to match your host user.  
+	Build the docker image, run a container, and start a shell session inside the container using the following commands:
 	```
 	docker build -t online-portfolio-v3 .
 	

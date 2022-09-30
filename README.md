@@ -2,10 +2,6 @@
 
 > My online portfolio to share my projects and provide more information about myself. Built with React and Material-UI.
 
-## Visit My Website
-
-https://www.jaimelovera.com/
-
 ## Quick Start
 
 1. (Optional) Setup environment using docker:
@@ -35,4 +31,4 @@ I wanted a place to share my personal projects and to provide more information a
 
 ## App Info
 
-#### Author: [Jaime Lovera](https://www.jaimelovera.com/)
+#### Author: [Jaime Lovera](https://github.com/jaimelovera)

@@ -1,4 +1,4 @@
-# Online Portfolio - Iteration 3
+# Online Portfolio - Version 3
 
 > My online portfolio to share my projects and provide more information about myself. Built with React and Material-UI.
 
@@ -30,6 +30,24 @@
 ## Motivation
 
 I wanted a place to share my personal projects and to provide more information about myself.
+
+## Screenshots
+
+#### Home
+
+![Home](./readme_screenshots/home.jpg)
+
+#### About
+
+![About](./readme_screenshots/about.jpg)
+
+#### Projects
+
+![Projects](./readme_screenshots/projects.jpg)
+
+#### Contact
+
+![Contact](./readme_screenshots/contact.jpg)
 
 ## App Info
 

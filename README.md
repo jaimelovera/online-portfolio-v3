@@ -1,7 +1,9 @@
 # Online Portfolio - Iteration 3
 
 > My online portfolio to share my projects and provide more information about myself. Built with React and Material-UI.
+
 > No longer being hosted.
+
 ## Quick Start
 
 1. (Optional) Setup environment using docker:

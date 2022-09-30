@@ -1,8 +1,8 @@
 # Online Portfolio - Version 3
 
-> My online portfolio to share my projects and provide more information about myself. Built with React and Material-UI.
+###### Note: I decided to stop updating/hosting my online portfolio website.
 
-> No longer being hosted.
+> My online portfolio to share my projects and provide more information about myself. Built with React and Material-UI.
 
 ## Quick Start
 
